@@ -50,4 +50,4 @@ Repeat Weeks 1-3.
 #What routine will be used for this application?
 For the application, I'll be using a routine that's fairly popular on [r/Fitness](http://reddit.com/r/fitness), [A Linear Progression Based PPL Program for Beginners by Metallicapd] (https://www.reddit.com/r/Fitness/comments/37ylk5/a_linear_progression_based_ppl_program_for/).
 
-After getting permission from the creator of this routine, I've decided to go ahead and turn this routine into an app to help promote the routine and provide beginners with an alternative to the usual "build your strength base first and do a strength training program first" advice.
+After getting permission from the creator of this routine, I've decided to go ahead and turn this routine into an app to help promote the routine and provide beginners with an alternative to the usual "build your strength base by doing a strength training program first" advice.
