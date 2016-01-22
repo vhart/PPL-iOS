@@ -58,6 +58,6 @@ When it comes to working out, aside from consistency and keeping track of your d
 
 - **Simple Workout Logging Interface & Functionality** - The most important part of this app, or any workout app, should be logging your workouts. When I'm in the gym the last thing I want to do is fumble through screens trying to log my workout. It's key to make this process as simple as possible. As soon as you select the number of reps for your set, the rest countdown will start and then go off when it's time for another set.
 
-- **Visually Appealing Workout Progression** - Sure, looking at your weight numbers increase workout-to-workout is great, but when you see the progression on a graph? That's a different type of visual. Not only does it provide motivation, but it's also validation that you're putting in work.
+- **Visually Appealing Workout Progression** - Sure, looking at your weight numbers increase workout-to-workout is great, but when you see the progression of your body? That's a different type of visual. Not only does it provide motivation, but it's also validation that you're putting in work.
 
 - **Carefully Selected Video Demonstrations of Exercises** - How much you're able to lift doesn't matter if you're doing it incorrectly. Lifting with bad form may change the whole exercise and you might end up targeting the wrong muscle and possibly hurt yourself. By hand selecting the top resources of how to do certain exercises and providing them to the user, the PPL app will help the user reach their goals in an efficient and safe manner.
