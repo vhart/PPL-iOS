@@ -9,7 +9,7 @@
 import Foundation
 
 struct LogManager {
-    var collectionOfWorkoutLogs = OrderedDictionary<Int, (date: String, typeOfWorkout: TypeOfWorkout, workoutLog: WorkoutLog)>()
+    var collectionOfWorkoutLogs = OrderedDictionary<Int, (date: String, workoutLog: WorkoutLog)>()
     
     init(){
         
@@ -17,13 +17,12 @@ struct LogManager {
     
     mutating func addWorkoutLog(workoutLog: WorkoutLog) {
         let dateString = workoutLog.date
-        let typeOfWorkout = workoutLog.workout.typeOfWorkout
         
         if var lastKey = collectionOfWorkoutLogs.keys.last {
             lastKey += 1
-            collectionOfWorkoutLogs[lastKey] = (dateString, typeOfWorkout, workoutLog)
+            collectionOfWorkoutLogs[lastKey] = (dateString, workoutLog)
         } else {
-            collectionOfWorkoutLogs[0] = (dateString, typeOfWorkout, workoutLog)
+            collectionOfWorkoutLogs[0] = (dateString,workoutLog)
         }
         
     }
@@ -123,7 +122,7 @@ extension LogManager {
         let keys = collectionOfWorkoutLogs.keys.reverse()
         for i in keys {
             if let pastWorkoutType = collectionOfWorkoutLogs[i] {
-                if pastWorkoutType.typeOfWorkout == typeOfWorkout {
+                if pastWorkoutType.workoutLog.workout.typeOfWorkout == typeOfWorkout {
                     return pastWorkoutType.workoutLog.workout.exercises
                 }
             }
