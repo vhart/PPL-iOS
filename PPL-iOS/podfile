@@ -1,0 +1,4 @@
+use_frameworks!
+target 'PPL-iOS' do
+pod 'SwiftyTimer'
+end
