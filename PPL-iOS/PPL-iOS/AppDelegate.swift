@@ -17,8 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        let viewController = window!.rootViewController as! ViewController
-        viewController.managedContext = coreDataStack.context
+        let tabBarController = self.window?.rootViewController as! UITabBarController
+        let tabBarRootViewControllers = tabBarController.viewControllers! as [UIViewController]
+        let navigationViewController = tabBarRootViewControllers.first as! UINavigationController
+        let workoutCollectionViewController = navigationViewController.topViewController as! WorkoutCollectionViewController
+
+        
 
         do {
             
@@ -29,12 +33,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print(workoutLogs.count)
             //Create log manager singleton. Append fetched workoutLogs and managed object context
             LogManager.sharedInstance.setProperties(workoutLogs)
+            let currentWorkoutLog = LogManager.sharedInstance.createWorkoutLog(coreDataStack.context)
+            print(currentWorkoutLog.workout.typeOfWorkout)
+            workoutCollectionViewController.currentWorkoutLog = currentWorkoutLog
+            
 
             
         } catch let error as NSError {
             print("Fetching error: \(error.localizedDescription)")
         }
         
+        workoutCollectionViewController.managedContext = coreDataStack.context
         
         return true
     }
@@ -62,7 +71,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
-        coreDataStack.saveContext()
     }
     
 }

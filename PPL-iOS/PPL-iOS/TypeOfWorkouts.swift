@@ -15,3 +15,20 @@ enum TypeOfWorkout: Int {
     case AlternatePull = 3
     case AlternatePush = 4
 }
+
+extension TypeOfWorkout: CustomStringConvertible {
+    var description: String {
+        switch self {
+        case .Pull:
+            return "Pull"
+        case .Push:
+            return "Push"
+        case .Legs:
+            return "Legs"
+        case .AlternatePull:
+            return "Alt Pull"
+        case .AlternatePush:
+            return "Alt Push"
+        }
+    }
+}

@@ -15,7 +15,7 @@ extension NSDate {
         let currentDate = NSDate()
         let dateFormatter = NSDateFormatter()
         dateFormatter.locale = NSLocale.currentLocale()
-        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        dateFormatter.dateFormat = "dd MMM"
         
         return dateFormatter.stringFromDate(currentDate)
     }

@@ -87,3 +87,52 @@ extension Exercise {
     }
 }
 
+extension Exercise {
+    func abbreviatedExerciseName() -> String {
+        
+        switch exerciseName {
+        case ExerciseName.deadlift:
+            return "Deadlift"
+        case ExerciseName.barbellRow:
+            return "BB Row"
+        case ExerciseName.pulldown:
+            return "Pulldown"
+        case ExerciseName.seatedCableRow:
+            return "Cable Row"
+        case ExerciseName.facePull:
+            return "Face Pull"
+        case ExerciseName.hammerCurl:
+            return "HMR Curls"
+        case ExerciseName.dumbbellCurl:
+            return "DB Curls"
+        case ExerciseName.benchPress:
+            return "Bench"
+        case ExerciseName.overheadPress:
+            return "OH Press"
+        case ExerciseName.inclineDumbbellPress:
+            return "Incline DB"
+        case ExerciseName.tricepsPushdown:
+            return "Pushdown"
+        case ExerciseName.lateralRaises1:
+            return "Lat Raises"
+        case ExerciseName.overheadTricepsExtension:
+            return "OH Ext."
+        case ExerciseName.lateralRaises2:
+            return "Lat Raises"
+        case ExerciseName.squat:
+            return "Squat"
+        case ExerciseName.romanianDeadlift:
+            return "RDL"
+        case ExerciseName.legPress:
+            return "Leg Press"
+        case ExerciseName.legCurl:
+            return "Leg Curl"
+        case ExerciseName.calfRaises:
+            return "Calf Raises"
+        default:
+            return "None"
+        }
+        
+    }
+}
+

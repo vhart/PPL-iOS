@@ -7,13 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		501E42A21C7C1A1700DF71EC /* Double+CleanValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E42A11C7C1A1700DF71EC /* Double+CleanValue.swift */; };
+		501E42A61C7C1ECE00DF71EC /* LoggingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E42A51C7C1ECE00DF71EC /* LoggingCollectionViewCell.swift */; };
 		50363B691C7A6D11008FDE7D /* NSOrderedSet+SetToArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50363B681C7A6D11008FDE7D /* NSOrderedSet+SetToArray.swift */; };
 		50363B7D1C7B73E7008FDE7D /* LogManager+ExerciseUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50363B7C1C7B73E7008FDE7D /* LogManager+ExerciseUpdate.swift */; };
 		50363B851C7B7643008FDE7D /* LogManager+ExerciseUpdateHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50363B841C7B7643008FDE7D /* LogManager+ExerciseUpdateHelpers.swift */; };
 		50363B871C7B77CC008FDE7D /* LogManager+ExerciseReturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50363B861C7B77CC008FDE7D /* LogManager+ExerciseReturn.swift */; };
 		50363B891C7B7B6A008FDE7D /* LogManager+WorkoutType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50363B881C7B7B6A008FDE7D /* LogManager+WorkoutType.swift */; };
+		50386E931C7B9CE500735975 /* WorkoutCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50386E921C7B9CE500735975 /* WorkoutCollectionViewController.swift */; };
+		50386E961C7BA7F600735975 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50386E951C7BA7F600735975 /* HistoryViewController.swift */; };
+		50386E981C7BAB7D00735975 /* LoggingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50386E971C7BAB7D00735975 /* LoggingCollectionViewController.swift */; };
+		50386E9A1C7BAE8200735975 /* WorkoutLogCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50386E991C7BAE8200735975 /* WorkoutLogCollectionViewCell.swift */; };
 		50A91CE31C7619D00016002B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A91CE21C7619D00016002B /* CoreDataStack.swift */; };
 		50A91D101C7928730016002B /* NSDate+StringDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A91D0F1C7928730016002B /* NSDate+StringDate.swift */; };
+		50B2CAAB1C7BE4EB00363720 /* LogManager+WorkoutLogReturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B2CAAA1C7BE4EB00363720 /* LogManager+WorkoutLogReturn.swift */; };
 		50CD2BC31C754B5200E17B9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CD2BC21C754B5200E17B9E /* AppDelegate.swift */; };
 		50CD2BC51C754B5200E17B9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CD2BC41C754B5200E17B9E /* ViewController.swift */; };
 		50CD2BC81C754B5200E17B9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50CD2BC61C754B5200E17B9E /* Main.storyboard */; };
@@ -40,13 +47,20 @@
 
 /* Begin PBXFileReference section */
 		1C7A53357277D220C82931C8 /* Pods_PPL_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PPL_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		501E42A11C7C1A1700DF71EC /* Double+CleanValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+CleanValue.swift"; sourceTree = "<group>"; };
+		501E42A51C7C1ECE00DF71EC /* LoggingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingCollectionViewCell.swift; sourceTree = "<group>"; };
 		50363B681C7A6D11008FDE7D /* NSOrderedSet+SetToArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSOrderedSet+SetToArray.swift"; sourceTree = "<group>"; };
 		50363B7C1C7B73E7008FDE7D /* LogManager+ExerciseUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LogManager+ExerciseUpdate.swift"; sourceTree = "<group>"; };
 		50363B841C7B7643008FDE7D /* LogManager+ExerciseUpdateHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LogManager+ExerciseUpdateHelpers.swift"; sourceTree = "<group>"; };
 		50363B861C7B77CC008FDE7D /* LogManager+ExerciseReturn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LogManager+ExerciseReturn.swift"; sourceTree = "<group>"; };
 		50363B881C7B7B6A008FDE7D /* LogManager+WorkoutType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LogManager+WorkoutType.swift"; sourceTree = "<group>"; };
+		50386E921C7B9CE500735975 /* WorkoutCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutCollectionViewController.swift; sourceTree = "<group>"; };
+		50386E951C7BA7F600735975 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		50386E971C7BAB7D00735975 /* LoggingCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingCollectionViewController.swift; sourceTree = "<group>"; };
+		50386E991C7BAE8200735975 /* WorkoutLogCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutLogCollectionViewCell.swift; sourceTree = "<group>"; };
 		50A91CE21C7619D00016002B /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		50A91D0F1C7928730016002B /* NSDate+StringDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+StringDate.swift"; sourceTree = "<group>"; };
+		50B2CAAA1C7BE4EB00363720 /* LogManager+WorkoutLogReturn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LogManager+WorkoutLogReturn.swift"; sourceTree = "<group>"; };
 		50CD2BBF1C754B5200E17B9E /* PPL-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PPL-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50CD2BC21C754B5200E17B9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50CD2BC41C754B5200E17B9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				50363B881C7B7B6A008FDE7D /* LogManager+WorkoutType.swift */,
+				50B2CAAA1C7BE4EB00363720 /* LogManager+WorkoutLogReturn.swift */,
 				50363B7C1C7B73E7008FDE7D /* LogManager+ExerciseUpdate.swift */,
 				50363B861C7B77CC008FDE7D /* LogManager+ExerciseReturn.swift */,
 				50363B841C7B7643008FDE7D /* LogManager+ExerciseUpdateHelpers.swift */,
@@ -112,6 +127,19 @@
 				50CD2C2D1C756F7F00E17B9E /* Exercise+EnumValue.swift */,
 			);
 			name = "Exercise Extensions";
+			sourceTree = "<group>";
+		};
+		50386E941C7B9D3700735975 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				50386E921C7B9CE500735975 /* WorkoutCollectionViewController.swift */,
+				50386E991C7BAE8200735975 /* WorkoutLogCollectionViewCell.swift */,
+				50386E971C7BAB7D00735975 /* LoggingCollectionViewController.swift */,
+				501E42A51C7C1ECE00DF71EC /* LoggingCollectionViewCell.swift */,
+				50386E951C7BA7F600735975 /* HistoryViewController.swift */,
+				50CD2BC41C754B5200E17B9E /* ViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		50CD2BB61C754B5200E17B9E = {
@@ -138,8 +166,8 @@
 				50CD2BFF1C756C1700E17B9E /* Model */,
 				50CD2BC21C754B5200E17B9E /* AppDelegate.swift */,
 				50A91CE21C7619D00016002B /* CoreDataStack.swift */,
-				50CD2BC41C754B5200E17B9E /* ViewController.swift */,
 				50CD2BC61C754B5200E17B9E /* Main.storyboard */,
+				50386E941C7B9D3700735975 /* Controller */,
 				50CD2BCC1C754B5200E17B9E /* Assets.xcassets */,
 				50CD2BCE1C754B5200E17B9E /* LaunchScreen.storyboard */,
 				50CD2BD11C754B5200E17B9E /* Info.plist */,
@@ -191,6 +219,7 @@
 				50363B6C1C7AC399008FDE7D /* Exercise Extensions */,
 				50363B681C7A6D11008FDE7D /* NSOrderedSet+SetToArray.swift */,
 				50A91D0F1C7928730016002B /* NSDate+StringDate.swift */,
+				501E42A11C7C1A1700DF71EC /* Double+CleanValue.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -345,16 +374,21 @@
 			files = (
 				50363B891C7B7B6A008FDE7D /* LogManager+WorkoutType.swift in Sources */,
 				50CD2C461C7582C500E17B9E /* Workout+Routines.swift in Sources */,
+				50386E981C7BAB7D00735975 /* LoggingCollectionViewController.swift in Sources */,
 				50CD2BCB1C754B5200E17B9E /* PPL_iOS.xcdatamodeld in Sources */,
 				50CD2C351C75701100E17B9E /* TypeOfWorkouts.swift in Sources */,
 				50363B7D1C7B73E7008FDE7D /* LogManager+ExerciseUpdate.swift in Sources */,
 				50363B691C7A6D11008FDE7D /* NSOrderedSet+SetToArray.swift in Sources */,
+				50386E961C7BA7F600735975 /* HistoryViewController.swift in Sources */,
+				501E42A61C7C1ECE00DF71EC /* LoggingCollectionViewCell.swift in Sources */,
 				50CD2C2C1C756E1800E17B9E /* Set.swift in Sources */,
 				50CD2C181C756CC900E17B9E /* ExerciseNameConstants.swift in Sources */,
 				50CD2C3F1C75717E00E17B9E /* WorkoutLog+CoreDataProperties.swift in Sources */,
+				501E42A21C7C1A1700DF71EC /* Double+CleanValue.swift in Sources */,
 				50CD2C3E1C75717E00E17B9E /* Workout+CoreDataProperties.swift in Sources */,
 				50CD2C411C75717E00E17B9E /* Set+CoreDataProperties.swift in Sources */,
 				50CD2C281C756E1800E17B9E /* Exercise.swift in Sources */,
+				50386E931C7B9CE500735975 /* WorkoutCollectionViewController.swift in Sources */,
 				50CD2C371C75702500E17B9E /* ProgressionSchemes.swift in Sources */,
 				50CD2C2E1C756F7F00E17B9E /* Exercise+EnumValue.swift in Sources */,
 				50CD2C2A1C756E1800E17B9E /* WorkoutLog.swift in Sources */,
@@ -363,9 +397,11 @@
 				50CD2C301C756F9400E17B9E /* Workout+EnumValue.swift in Sources */,
 				50A91CE31C7619D00016002B /* CoreDataStack.swift in Sources */,
 				50363B851C7B7643008FDE7D /* LogManager+ExerciseUpdateHelpers.swift in Sources */,
+				50386E9A1C7BAE8200735975 /* WorkoutLogCollectionViewCell.swift in Sources */,
 				50CD2C4B1C758E0000E17B9E /* LogManager.swift in Sources */,
 				50CD2C471C7582CE00E17B9E /* Workout.swift in Sources */,
 				50A91D101C7928730016002B /* NSDate+StringDate.swift in Sources */,
+				50B2CAAB1C7BE4EB00363720 /* LogManager+WorkoutLogReturn.swift in Sources */,
 				50363B871C7B77CC008FDE7D /* LogManager+ExerciseReturn.swift in Sources */,
 				50CD2BC31C754B5200E17B9E /* AppDelegate.swift in Sources */,
 			);
