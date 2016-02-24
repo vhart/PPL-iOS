@@ -8,52 +8,73 @@
 
 import UIKit
 
+protocol LoggingButtonDelegate {
+    func setLogged(sender: SetButton)
+}
+
 class LoggingCollectionViewCell: UICollectionViewCell {
+
     
-    @IBOutlet weak var set1Button: UIButton!
-    @IBOutlet weak var set2Button: UIButton!
-    @IBOutlet weak var set3Button: UIButton!
-    @IBOutlet weak var set4Button: UIButton!
-    @IBOutlet weak var set5Button: UIButton!
-    var repCount = 12
+    @IBOutlet var setButtons: [SetButton]!
+    @IBOutlet weak var exerciseNameLabel: UILabel!
+    @IBOutlet weak var setxRepsxWeightLabel: UILabel!
+    var delegate: LoggingButtonDelegate?
+    var numberOfSets: Int16 = 0
+    var numberOfReps: Int16!
+    var repCount: Int16 = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        setxRepsxWeightLabel.textColor = UIColor(red:0.0, green:0.44, blue:0.91, alpha:1.0)
     }
     
     func formatButtons(){
-        formatButton(set1Button)
-        formatButton(set2Button)
-        formatButton(set3Button)
-        formatButton(set4Button)
-        formatButton(set5Button)
+        for i in 0..<numberOfSets {
+            formatButton(setButtons[Int(i)], exerciseIndex: i)
+
+            
+        }
         
+        let setButtonsCount = Int16(setButtons.count)
+        
+        for i in 0..<setButtonsCount-numberOfSets {
+            disableButton(setButtons[Int(setButtonsCount-i-1)])
+        }
     }
     
-    func formatButton(button:UIButton) {
+    func disableButton(button: SetButton){
+        button.enabled = false
+    }
+    func formatButton(button:SetButton, exerciseIndex: Int16) {
         button.setTitle("", forState: .Normal)
         button.backgroundColor = UIColor.whiteColor()
         button.layer.cornerRadius = 0.5 * button.bounds.size.width
         button.layer.borderWidth = 1.0
         button.layer.borderColor = UIColor.lightGrayColor().CGColor
-        button.setImage(UIImage(named:"thumbsUp.png"), forState: .Normal)
+        button.exerciseIndex = exerciseIndex
+        initRepCount(button)
 
     }
 
-    @IBAction func setLogged(sender: UIButton) {
-        sender.backgroundColor = UIColor.redColor()
+    @IBAction func setLogged(sender: SetButton) {
+        sender.backgroundColor = UIColor(red:0.0, green:0.44, blue:0.91, alpha:1.0)
         sender.layer.borderWidth = 0
         
-        sender.setTitle("\(repCount)", forState: .Normal)
+        sender.setTitle("\(sender.repCount)", forState: .Normal)
         sender.tintColor = UIColor.whiteColor()
-        repCount -= 1
         
-        if repCount < 0 {
-            formatButton(sender)
-            repCount = 12
-            
+        if sender.repCount < 0 {
+            formatButton(sender, exerciseIndex: sender.exerciseIndex)
+        } else {
+            sender.repCount -= 1
         }
         
+        self.delegate?.setLogged(sender)
+        
+    }
+    
+    func initRepCount(buton: SetButton) {
+        buton.repCount = numberOfReps
     }
 
 

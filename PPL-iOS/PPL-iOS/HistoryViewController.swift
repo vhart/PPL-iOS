@@ -13,7 +13,6 @@ class HistoryViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        print(lit)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

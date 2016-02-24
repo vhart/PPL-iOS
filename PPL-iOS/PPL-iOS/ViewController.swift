@@ -58,6 +58,7 @@ class ViewController: UIViewController {
         let mutableExercises = workoutLog.workout.exercises.mutableCopy() as! NSMutableOrderedSet
         
         print("/n\(workoutLog.workout.typeOfWorkout)")
+        
         for exercise in mutableExercises {
             
             let exercise = exercise as! Exercise

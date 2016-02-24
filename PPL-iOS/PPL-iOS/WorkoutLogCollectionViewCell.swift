@@ -29,12 +29,13 @@ class WorkoutLogCollectionViewCell: UICollectionViewCell {
             exerciseNameLabels[i].text = exercises[i].abbreviatedExerciseName()
             
             exerciseSetxRepxWeightLabels[i].text = "\(sets.count)x\(sets.first!.numberOfReps) \(exercises[i].weight.cleanValue)lbs"
+            exerciseSetxRepxWeightLabels[i].textColor = UIColor.lightGrayColor()
             
-            if exercises[i].didCompleteAllSets {
-                exerciseSetxRepxWeightLabels[i].textColor = UIColor.greenColor()
-            } else {
-                exerciseSetxRepxWeightLabels[i].textColor = UIColor.redColor()
-            }
+//            if exercises[i].didCompleteAllSets {
+//                exerciseSetxRepxWeightLabels[i].textColor = UIColor.greenColor()
+//            } else {
+//                exerciseSetxRepxWeightLabels[i].textColor = UIColor.redColor()
+//            }
             
             exerciseSetxRepxWeightLabels[i].sizeToFit()
             exerciseNameLabels[i].sizeToFit()

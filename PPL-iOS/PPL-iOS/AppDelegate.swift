@@ -16,11 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var coreDataStack = CoreDataStack()
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        application.statusBarStyle = UIStatusBarStyle.LightContent
+        
         
         let tabBarController = self.window?.rootViewController as! UITabBarController
         let tabBarRootViewControllers = tabBarController.viewControllers! as [UIViewController]
         let navigationViewController = tabBarRootViewControllers.first as! UINavigationController
-        let workoutCollectionViewController = navigationViewController.topViewController as! WorkoutCollectionViewController
+        let workoutViewController = navigationViewController.topViewController as! WorkoutViewController
+                navigationViewController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+        navigationViewController.navigationBar.tintColor = UIColor.whiteColor()
 
         
 
@@ -35,7 +39,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             LogManager.sharedInstance.setProperties(workoutLogs)
             let currentWorkoutLog = LogManager.sharedInstance.createWorkoutLog(coreDataStack.context)
             print(currentWorkoutLog.workout.typeOfWorkout)
-            workoutCollectionViewController.currentWorkoutLog = currentWorkoutLog
+
+            workoutViewController.currentWorkoutLog = currentWorkoutLog
             
 
             
@@ -43,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Fetching error: \(error.localizedDescription)")
         }
         
-        workoutCollectionViewController.managedContext = coreDataStack.context
+        workoutViewController.managedContext = coreDataStack.context
         
         return true
     }

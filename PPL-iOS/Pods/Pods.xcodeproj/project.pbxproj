@@ -7,63 +7,68 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E917FE54865D05F780D7428C6C76644 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		4495AD8F4BC4A40E7D344DB52682E3D6 /* Pods-PPL-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB8DB01DEC9009C73D19377CEF21F50 /* Pods-PPL-iOS-dummy.m */; };
-		482FB956ABEFB36B2BE0C92732DC4FB4 /* SwiftyTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B8865EA2E94D71D95F3481FDB1BB26 /* SwiftyTimer-dummy.m */; };
-		7EC94C667122B621DE18FC2590E49C2B /* SwiftyTimer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4580AD3BBF92DB759221537C2F1F6B4C /* SwiftyTimer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		81A3F13CACF282C78BB54B60C29D4C5B /* Pods-PPL-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DA7D045E5473D2C9356B59E8CF46D0B /* Pods-PPL-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		86370AE949CDC8A58A20FC704CE39C1A /* SwiftyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB524268FD6373AF054E652197BB8B1 /* SwiftyTimer.swift */; };
-		F55B681DE1BA2EAD887012597523DD92 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		03B993867FC7BA932287AB0ABF077484 /* Pods-PPL-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB8DB01DEC9009C73D19377CEF21F50 /* Pods-PPL-iOS-dummy.m */; };
+		26CD17C3088B2DFA1B34B56801A1AB05 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		356DCF78461041ECB0E15A8DF6703A77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		5029B2E876AEC61CF42681DD6E626E9A /* NotificationAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F952FBC45738C37590350D68240D7F5A /* NotificationAlertView-dummy.m */; };
+		76ED4172A33B7E476BF01CD5F796948D /* NotificationAlertView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B2C807D66546B9643324CDBCCBB1CD81 /* NotificationAlertView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		989E2F8CADB8837E27C81AA86C648303 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */; };
+		9B9A8FA2B88F77C6DDF667347B19412B /* Pods-PPL-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DA7D045E5473D2C9356B59E8CF46D0B /* Pods-PPL-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CCABA0590CB1D4F80FF0387EED5BCF7A /* APNotificationAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F569E674659536C21E79D554F6FA91 /* APNotificationAlertView.swift */; };
+		DA6B96256100E845CA0D51A0D24771A8 /* APNotificationAlertViewBaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95CA16AACD0BE8A018DE9958D245206 /* APNotificationAlertViewBaseExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		ECC2E46E39448B523D54C87E83EE3C55 /* PBXContainerItemProxy */ = {
+		FBC7B2AD3B79DC06DC211EE352D4642C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A756FBBC7C5235EF210601FD843D78C2;
-			remoteInfo = SwiftyTimer;
+			remoteGlobalIDString = 09E818A9453930FE47EAFCAB113BDCDB;
+			remoteInfo = NotificationAlertView;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D26FC88FFBF7125C392B3BF5E8B518F /* NotificationAlertView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NotificationAlertView-prefix.pch"; sourceTree = "<group>"; };
+		30CA88DAE5EA85BEE04846B69A42983C /* NotificationAlertView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = NotificationAlertView.modulemap; sourceTree = "<group>"; };
 		3C73EBDE19F80386C7BAA860CA0AE074 /* Pods-PPL-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PPL-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		4580AD3BBF92DB759221537C2F1F6B4C /* SwiftyTimer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyTimer-umbrella.h"; sourceTree = "<group>"; };
-		57AA23A67684BBC14B62B387EFB9AC99 /* SwiftyTimer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyTimer.xcconfig; sourceTree = "<group>"; };
-		6D48250DDCC3E40BABA2A58C8039D3AE /* SwiftyTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		74B8865EA2E94D71D95F3481FDB1BB26 /* SwiftyTimer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyTimer-dummy.m"; sourceTree = "<group>"; };
+		406EE604C135F01BC001876CEBD8AF57 /* Pods_PPL_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PPL_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A331F64AC4388D46AB67E28AF6ED704 /* NotificationAlertView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NotificationAlertView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		72F569E674659536C21E79D554F6FA91 /* APNotificationAlertView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = APNotificationAlertView.swift; path = APNotificationAlertView/APNotificationAlertView.swift; sourceTree = "<group>"; };
 		7DA7D045E5473D2C9356B59E8CF46D0B /* Pods-PPL-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PPL-iOS-umbrella.h"; sourceTree = "<group>"; };
 		7DB9862E4670CCA2B2C032AA9AE5C713 /* Pods-PPL-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PPL-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		8AB3F3F70D38B932A71E3A9A25631B9D /* NotificationAlertView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NotificationAlertView.xcconfig; sourceTree = "<group>"; };
 		A02F731F08A363688AF832A0008FCBED /* Pods-PPL-iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PPL-iOS-frameworks.sh"; sourceTree = "<group>"; };
-		A3261216F166C519D4858B0693E5C3FC /* Pods_PPL_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PPL_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7805C30D2FA4297F222F3E60BBC2B7 /* Pods-PPL-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PPL-iOS.modulemap"; sourceTree = "<group>"; };
+		B2C807D66546B9643324CDBCCBB1CD81 /* NotificationAlertView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NotificationAlertView-umbrella.h"; sourceTree = "<group>"; };
 		B55D985BE8CE4C94D9E34FDAA1DAEF1F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B95CA16AACD0BE8A018DE9958D245206 /* APNotificationAlertViewBaseExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = APNotificationAlertViewBaseExtension.swift; path = APNotificationAlertView/APNotificationAlertViewBaseExtension.swift; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BDB524268FD6373AF054E652197BB8B1 /* SwiftyTimer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyTimer.swift; path = Src/SwiftyTimer.swift; sourceTree = "<group>"; };
+		C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		C861F0015CA6EAC99719AD0C2A3A95DB /* Pods-PPL-iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PPL-iOS-resources.sh"; sourceTree = "<group>"; };
 		CFB8DB01DEC9009C73D19377CEF21F50 /* Pods-PPL-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PPL-iOS-dummy.m"; sourceTree = "<group>"; };
 		D6505F80D32CD4BBFBC934B4D484AC2A /* Pods-PPL-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PPL-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D9D9AC85DC0DD14279F5DC28A4294A30 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E3E681E81748EF231AC794837C284CBF /* SwiftyTimer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyTimer.modulemap; sourceTree = "<group>"; };
 		E99362E172ABA808D8BC8F2170BDA9B9 /* Pods-PPL-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PPL-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		F7BBA62CF498FDB85AB5F982952961D4 /* SwiftyTimer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyTimer-prefix.pch"; sourceTree = "<group>"; };
+		F952FBC45738C37590350D68240D7F5A /* NotificationAlertView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NotificationAlertView-dummy.m"; sourceTree = "<group>"; };
+		FFC299B1B470D4BB79361DE73CFC564E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2638C6E5508A31B77BF1A9615DCD2E13 /* Frameworks */ = {
+		447A9DDB027E29439C75A11EF93A0271 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F55B681DE1BA2EAD887012597523DD92 /* Foundation.framework in Frameworks */,
+				356DCF78461041ECB0E15A8DF6703A77 /* Foundation.framework in Frameworks */,
+				989E2F8CADB8837E27C81AA86C648303 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		96BB0E0C15715C74657AFACB14CE7CB3 /* Frameworks */ = {
+		A12F42E2B9E0E948A68091458224D74D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E917FE54865D05F780D7428C6C76644 /* Foundation.framework in Frameworks */,
+				26CD17C3088B2DFA1B34B56801A1AB05 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,22 +93,13 @@
 			path = "Target Support Files/Pods-PPL-iOS";
 			sourceTree = "<group>";
 		};
-		0BF8F392315E9B63F2D696D1AAF54A73 /* Products */ = {
+		18340F12838DEE43507667CC74401EB1 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				A3261216F166C519D4858B0693E5C3FC /* Pods_PPL_iOS.framework */,
-				6D48250DDCC3E40BABA2A58C8039D3AE /* SwiftyTimer.framework */,
+				6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */,
+				C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */,
 			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		19F579A29CC71036A3DEADAA78FCE306 /* SwiftyTimer */ = {
-			isa = PBXGroup;
-			children = (
-				BDB524268FD6373AF054E652197BB8B1 /* SwiftyTimer.swift */,
-				DEF2FDB1D7B26EDE05236DF8C25816C5 /* Support Files */,
-			);
-			path = SwiftyTimer;
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		1EFAB1062FE19426D2895296960E706E /* Targets Support Files */ = {
@@ -114,110 +110,121 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		7DB346D0F39D3F0E887471402A8071AB = {
+		2DB58D4C5F04EA861DED489D196C2345 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				D82013B7A3DD8DE44677CC078EB75711 /* Pods */,
-				0BF8F392315E9B63F2D696D1AAF54A73 /* Products */,
-				1EFAB1062FE19426D2895296960E706E /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		D82013B7A3DD8DE44677CC078EB75711 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				19F579A29CC71036A3DEADAA78FCE306 /* SwiftyTimer */,
+				2EC41FAEF623E227F15E3E1B58D135BD /* NotificationAlertView */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		DEF2FDB1D7B26EDE05236DF8C25816C5 /* Support Files */ = {
+		2EC41FAEF623E227F15E3E1B58D135BD /* NotificationAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				D9D9AC85DC0DD14279F5DC28A4294A30 /* Info.plist */,
-				E3E681E81748EF231AC794837C284CBF /* SwiftyTimer.modulemap */,
-				57AA23A67684BBC14B62B387EFB9AC99 /* SwiftyTimer.xcconfig */,
-				74B8865EA2E94D71D95F3481FDB1BB26 /* SwiftyTimer-dummy.m */,
-				F7BBA62CF498FDB85AB5F982952961D4 /* SwiftyTimer-prefix.pch */,
-				4580AD3BBF92DB759221537C2F1F6B4C /* SwiftyTimer-umbrella.h */,
+				72F569E674659536C21E79D554F6FA91 /* APNotificationAlertView.swift */,
+				B95CA16AACD0BE8A018DE9958D245206 /* APNotificationAlertViewBaseExtension.swift */,
+				7BB8B55A6CFDBF24D75C55EA266786AB /* Support Files */,
+			);
+			path = NotificationAlertView;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18340F12838DEE43507667CC74401EB1 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6DC4A5E8EED90FC1E8E2DFA4E765C27F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4A331F64AC4388D46AB67E28AF6ED704 /* NotificationAlertView.framework */,
+				406EE604C135F01BC001876CEBD8AF57 /* Pods_PPL_iOS.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7BB8B55A6CFDBF24D75C55EA266786AB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FFC299B1B470D4BB79361DE73CFC564E /* Info.plist */,
+				30CA88DAE5EA85BEE04846B69A42983C /* NotificationAlertView.modulemap */,
+				8AB3F3F70D38B932A71E3A9A25631B9D /* NotificationAlertView.xcconfig */,
+				F952FBC45738C37590350D68240D7F5A /* NotificationAlertView-dummy.m */,
+				0D26FC88FFBF7125C392B3BF5E8B518F /* NotificationAlertView-prefix.pch */,
+				B2C807D66546B9643324CDBCCBB1CD81 /* NotificationAlertView-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/SwiftyTimer";
+			path = "../Target Support Files/NotificationAlertView";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				2DB58D4C5F04EA861DED489D196C2345 /* Pods */,
+				6DC4A5E8EED90FC1E8E2DFA4E765C27F /* Products */,
+				1EFAB1062FE19426D2895296960E706E /* Targets Support Files */,
+			);
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		92FE5384B842B8F5787E1D397AB1A741 /* Headers */ = {
+		1EF1A4A2A3921956E255A525B89C90A8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EC94C667122B621DE18FC2590E49C2B /* SwiftyTimer-umbrella.h in Headers */,
+				76ED4172A33B7E476BF01CD5F796948D /* NotificationAlertView-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F6A11BF36725E29D1C440AD6E76D75FB /* Headers */ = {
+		4BE2981F9E21D1F7839E1AF02AA1B426 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81A3F13CACF282C78BB54B60C29D4C5B /* Pods-PPL-iOS-umbrella.h in Headers */,
+				9B9A8FA2B88F77C6DDF667347B19412B /* Pods-PPL-iOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		6DA8973C2AF500052E90D178DFCE65FE /* Pods-PPL-iOS */ = {
+		09E818A9453930FE47EAFCAB113BDCDB /* NotificationAlertView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1E5C3DDF24438A645959F196F126EF3C /* Build configuration list for PBXNativeTarget "Pods-PPL-iOS" */;
+			buildConfigurationList = 7C714E3D4CD22D115001E32211530B92 /* Build configuration list for PBXNativeTarget "NotificationAlertView" */;
 			buildPhases = (
-				85671D1FCEBF30C06E281811896C853E /* Sources */,
-				96BB0E0C15715C74657AFACB14CE7CB3 /* Frameworks */,
-				F6A11BF36725E29D1C440AD6E76D75FB /* Headers */,
+				46CA1CD79AA7D74A03243356C0EEB942 /* Sources */,
+				447A9DDB027E29439C75A11EF93A0271 /* Frameworks */,
+				1EF1A4A2A3921956E255A525B89C90A8 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				90BAFFC40412E8F89923BA3FCEE7C885 /* PBXTargetDependency */,
+			);
+			name = NotificationAlertView;
+			productName = NotificationAlertView;
+			productReference = 4A331F64AC4388D46AB67E28AF6ED704 /* NotificationAlertView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8130F10F39BC05717643536C36FCD7C0 /* Pods-PPL-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D6F63C512098339C7BA07AE563F6828 /* Build configuration list for PBXNativeTarget "Pods-PPL-iOS" */;
+			buildPhases = (
+				BB127CC655F4937A01202808AD1E4348 /* Sources */,
+				A12F42E2B9E0E948A68091458224D74D /* Frameworks */,
+				4BE2981F9E21D1F7839E1AF02AA1B426 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0351B195E4E1DDA9C82AE1C32F253A8A /* PBXTargetDependency */,
 			);
 			name = "Pods-PPL-iOS";
 			productName = "Pods-PPL-iOS";
-			productReference = A3261216F166C519D4858B0693E5C3FC /* Pods_PPL_iOS.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		A756FBBC7C5235EF210601FD843D78C2 /* SwiftyTimer */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 347D6873D2146B8BAD53BB91128A31EF /* Build configuration list for PBXNativeTarget "SwiftyTimer" */;
-			buildPhases = (
-				D3C5FB22C36A72D0BA992B688E33510D /* Sources */,
-				2638C6E5508A31B77BF1A9615DCD2E13 /* Frameworks */,
-				92FE5384B842B8F5787E1D397AB1A741 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SwiftyTimer;
-			productName = SwiftyTimer;
-			productReference = 6D48250DDCC3E40BABA2A58C8039D3AE /* SwiftyTimer.framework */;
+			productReference = 406EE604C135F01BC001876CEBD8AF57 /* Pods_PPL_iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -237,49 +244,50 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 0BF8F392315E9B63F2D696D1AAF54A73 /* Products */;
+			productRefGroup = 6DC4A5E8EED90FC1E8E2DFA4E765C27F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6DA8973C2AF500052E90D178DFCE65FE /* Pods-PPL-iOS */,
-				A756FBBC7C5235EF210601FD843D78C2 /* SwiftyTimer */,
+				09E818A9453930FE47EAFCAB113BDCDB /* NotificationAlertView */,
+				8130F10F39BC05717643536C36FCD7C0 /* Pods-PPL-iOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		85671D1FCEBF30C06E281811896C853E /* Sources */ = {
+		46CA1CD79AA7D74A03243356C0EEB942 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4495AD8F4BC4A40E7D344DB52682E3D6 /* Pods-PPL-iOS-dummy.m in Sources */,
+				CCABA0590CB1D4F80FF0387EED5BCF7A /* APNotificationAlertView.swift in Sources */,
+				DA6B96256100E845CA0D51A0D24771A8 /* APNotificationAlertViewBaseExtension.swift in Sources */,
+				5029B2E876AEC61CF42681DD6E626E9A /* NotificationAlertView-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D3C5FB22C36A72D0BA992B688E33510D /* Sources */ = {
+		BB127CC655F4937A01202808AD1E4348 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				482FB956ABEFB36B2BE0C92732DC4FB4 /* SwiftyTimer-dummy.m in Sources */,
-				86370AE949CDC8A58A20FC704CE39C1A /* SwiftyTimer.swift in Sources */,
+				03B993867FC7BA932287AB0ABF077484 /* Pods-PPL-iOS-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		90BAFFC40412E8F89923BA3FCEE7C885 /* PBXTargetDependency */ = {
+		0351B195E4E1DDA9C82AE1C32F253A8A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = SwiftyTimer;
-			target = A756FBBC7C5235EF210601FD843D78C2 /* SwiftyTimer */;
-			targetProxy = ECC2E46E39448B523D54C87E83EE3C55 /* PBXContainerItemProxy */;
+			name = NotificationAlertView;
+			target = 09E818A9453930FE47EAFCAB113BDCDB /* NotificationAlertView */;
+			targetProxy = FBC7B2AD3B79DC06DC211EE352D4642C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0A072FCEE79794DBE0D39AC8AC7332ED /* Debug */ = {
+		4A95BE9DA0F1282AC48C67AE03E3AD76 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 57AA23A67684BBC14B62B387EFB9AC99 /* SwiftyTimer.xcconfig */;
+			baseConfigurationReference = 8AB3F3F70D38B932A71E3A9A25631B9D /* NotificationAlertView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -288,14 +296,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyTimer/SwiftyTimer-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyTimer/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/NotificationAlertView/NotificationAlertView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NotificationAlertView/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftyTimer/SwiftyTimer.modulemap";
+				MODULEMAP_FILE = "Target Support Files/NotificationAlertView/NotificationAlertView.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SwiftyTimer;
+				PRODUCT_NAME = NotificationAlertView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -305,34 +313,7 @@
 			};
 			name = Debug;
 		};
-		1BB3948050ECF7BD5E4E52A883E75A3B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 57AA23A67684BBC14B62B387EFB9AC99 /* SwiftyTimer.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyTimer/SwiftyTimer-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyTimer/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftyTimer/SwiftyTimer.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftyTimer;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		55E69694E42D542DEB3930F77318433C /* Debug */ = {
+		663FA6F2F1AD194201B1AE260814968C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7DB9862E4670CCA2B2C032AA9AE5C713 /* Pods-PPL-iOS.debug.xcconfig */;
 			buildSettings = {
@@ -362,6 +343,63 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		798934240B732F396ACF3CBBB3C3581E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C73EBDE19F80386C7BAA860CA0AE074 /* Pods-PPL-iOS.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PPL-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PPL-iOS/Pods-PPL-iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_PPL_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8C880349992736FB005501CA3F83945D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AB3F3F70D38B932A71E3A9A25631B9D /* NotificationAlertView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/NotificationAlertView/NotificationAlertView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NotificationAlertView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NotificationAlertView/NotificationAlertView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = NotificationAlertView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		8D1534490D941DCA47C62AC4314182AF /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -436,48 +474,9 @@
 			};
 			name = Release;
 		};
-		E9DFD6C2E1C9C9F452AF23F42B6C9A92 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C73EBDE19F80386C7BAA860CA0AE074 /* Pods-PPL-iOS.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-PPL-iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PPL-iOS/Pods-PPL-iOS.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_PPL_iOS;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1E5C3DDF24438A645959F196F126EF3C /* Build configuration list for PBXNativeTarget "Pods-PPL-iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				55E69694E42D542DEB3930F77318433C /* Debug */,
-				E9DFD6C2E1C9C9F452AF23F42B6C9A92 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -487,11 +486,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		347D6873D2146B8BAD53BB91128A31EF /* Build configuration list for PBXNativeTarget "SwiftyTimer" */ = {
+		7C714E3D4CD22D115001E32211530B92 /* Build configuration list for PBXNativeTarget "NotificationAlertView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0A072FCEE79794DBE0D39AC8AC7332ED /* Debug */,
-				1BB3948050ECF7BD5E4E52A883E75A3B /* Release */,
+				4A95BE9DA0F1282AC48C67AE03E3AD76 /* Debug */,
+				8C880349992736FB005501CA3F83945D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D6F63C512098339C7BA07AE563F6828 /* Build configuration list for PBXNativeTarget "Pods-PPL-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				663FA6F2F1AD194201B1AE260814968C /* Debug */,
+				798934240B732F396ACF3CBBB3C3581E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

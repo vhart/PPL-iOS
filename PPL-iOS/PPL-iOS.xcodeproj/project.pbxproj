@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		501E42A21C7C1A1700DF71EC /* Double+CleanValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E42A11C7C1A1700DF71EC /* Double+CleanValue.swift */; };
 		501E42A61C7C1ECE00DF71EC /* LoggingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E42A51C7C1ECE00DF71EC /* LoggingCollectionViewCell.swift */; };
+		501E42AA1C7C8D0800DF71EC /* SetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E42A91C7C8D0800DF71EC /* SetButton.swift */; };
+		501E42AD1C7CB72C00DF71EC /* APNotificationAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E42AB1C7CB72C00DF71EC /* APNotificationAlertView.swift */; };
+		501E42AE1C7CB72C00DF71EC /* APNotificationAlertViewBaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E42AC1C7CB72C00DF71EC /* APNotificationAlertViewBaseExtension.swift */; };
+		501E42B31C7CCC2000DF71EC /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E42B21C7CCC2000DF71EC /* WorkoutViewController.swift */; };
+		501E42B51C7CD65C00DF71EC /* LoggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E42B41C7CD65C00DF71EC /* LoggingViewController.swift */; };
 		50363B691C7A6D11008FDE7D /* NSOrderedSet+SetToArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50363B681C7A6D11008FDE7D /* NSOrderedSet+SetToArray.swift */; };
 		50363B7D1C7B73E7008FDE7D /* LogManager+ExerciseUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50363B7C1C7B73E7008FDE7D /* LogManager+ExerciseUpdate.swift */; };
 		50363B851C7B7643008FDE7D /* LogManager+ExerciseUpdateHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50363B841C7B7643008FDE7D /* LogManager+ExerciseUpdateHelpers.swift */; };
@@ -49,6 +54,11 @@
 		1C7A53357277D220C82931C8 /* Pods_PPL_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PPL_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		501E42A11C7C1A1700DF71EC /* Double+CleanValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+CleanValue.swift"; sourceTree = "<group>"; };
 		501E42A51C7C1ECE00DF71EC /* LoggingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingCollectionViewCell.swift; sourceTree = "<group>"; };
+		501E42A91C7C8D0800DF71EC /* SetButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetButton.swift; sourceTree = "<group>"; };
+		501E42AB1C7CB72C00DF71EC /* APNotificationAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APNotificationAlertView.swift; path = ../Pods/NotificationAlertView/APNotificationAlertView/APNotificationAlertView.swift; sourceTree = "<group>"; };
+		501E42AC1C7CB72C00DF71EC /* APNotificationAlertViewBaseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APNotificationAlertViewBaseExtension.swift; path = ../Pods/NotificationAlertView/APNotificationAlertView/APNotificationAlertViewBaseExtension.swift; sourceTree = "<group>"; };
+		501E42B21C7CCC2000DF71EC /* WorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
+		501E42B41C7CD65C00DF71EC /* LoggingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingViewController.swift; sourceTree = "<group>"; };
 		50363B681C7A6D11008FDE7D /* NSOrderedSet+SetToArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSOrderedSet+SetToArray.swift"; sourceTree = "<group>"; };
 		50363B7C1C7B73E7008FDE7D /* LogManager+ExerciseUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LogManager+ExerciseUpdate.swift"; sourceTree = "<group>"; };
 		50363B841C7B7643008FDE7D /* LogManager+ExerciseUpdateHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LogManager+ExerciseUpdateHelpers.swift"; sourceTree = "<group>"; };
@@ -100,6 +110,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		501E42B61C7CEFD800DF71EC /* delete */ = {
+			isa = PBXGroup;
+			children = (
+				50386E921C7B9CE500735975 /* WorkoutCollectionViewController.swift */,
+				50386E971C7BAB7D00735975 /* LoggingCollectionViewController.swift */,
+				50CD2BC41C754B5200E17B9E /* ViewController.swift */,
+			);
+			name = delete;
+			sourceTree = "<group>";
+		};
 		50363B6A1C7AC380008FDE7D /* Workout Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,12 +152,15 @@
 		50386E941C7B9D3700735975 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				50386E921C7B9CE500735975 /* WorkoutCollectionViewController.swift */,
+				501E42B61C7CEFD800DF71EC /* delete */,
+				501E42B21C7CCC2000DF71EC /* WorkoutViewController.swift */,
+				501E42B41C7CD65C00DF71EC /* LoggingViewController.swift */,
 				50386E991C7BAE8200735975 /* WorkoutLogCollectionViewCell.swift */,
-				50386E971C7BAB7D00735975 /* LoggingCollectionViewController.swift */,
 				501E42A51C7C1ECE00DF71EC /* LoggingCollectionViewCell.swift */,
+				501E42A91C7C8D0800DF71EC /* SetButton.swift */,
 				50386E951C7BA7F600735975 /* HistoryViewController.swift */,
-				50CD2BC41C754B5200E17B9E /* ViewController.swift */,
+				501E42AB1C7CB72C00DF71EC /* APNotificationAlertView.swift */,
+				501E42AC1C7CB72C00DF71EC /* APNotificationAlertViewBaseExtension.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -381,8 +404,10 @@
 				50363B691C7A6D11008FDE7D /* NSOrderedSet+SetToArray.swift in Sources */,
 				50386E961C7BA7F600735975 /* HistoryViewController.swift in Sources */,
 				501E42A61C7C1ECE00DF71EC /* LoggingCollectionViewCell.swift in Sources */,
+				501E42AA1C7C8D0800DF71EC /* SetButton.swift in Sources */,
 				50CD2C2C1C756E1800E17B9E /* Set.swift in Sources */,
 				50CD2C181C756CC900E17B9E /* ExerciseNameConstants.swift in Sources */,
+				501E42B31C7CCC2000DF71EC /* WorkoutViewController.swift in Sources */,
 				50CD2C3F1C75717E00E17B9E /* WorkoutLog+CoreDataProperties.swift in Sources */,
 				501E42A21C7C1A1700DF71EC /* Double+CleanValue.swift in Sources */,
 				50CD2C3E1C75717E00E17B9E /* Workout+CoreDataProperties.swift in Sources */,
@@ -395,15 +420,18 @@
 				50CD2BC51C754B5200E17B9E /* ViewController.swift in Sources */,
 				50CD2C3D1C75717E00E17B9E /* Exercise+CoreDataProperties.swift in Sources */,
 				50CD2C301C756F9400E17B9E /* Workout+EnumValue.swift in Sources */,
+				501E42AE1C7CB72C00DF71EC /* APNotificationAlertViewBaseExtension.swift in Sources */,
 				50A91CE31C7619D00016002B /* CoreDataStack.swift in Sources */,
 				50363B851C7B7643008FDE7D /* LogManager+ExerciseUpdateHelpers.swift in Sources */,
 				50386E9A1C7BAE8200735975 /* WorkoutLogCollectionViewCell.swift in Sources */,
+				501E42AD1C7CB72C00DF71EC /* APNotificationAlertView.swift in Sources */,
 				50CD2C4B1C758E0000E17B9E /* LogManager.swift in Sources */,
 				50CD2C471C7582CE00E17B9E /* Workout.swift in Sources */,
 				50A91D101C7928730016002B /* NSDate+StringDate.swift in Sources */,
 				50B2CAAB1C7BE4EB00363720 /* LogManager+WorkoutLogReturn.swift in Sources */,
 				50363B871C7B77CC008FDE7D /* LogManager+ExerciseReturn.swift in Sources */,
 				50CD2BC31C754B5200E17B9E /* AppDelegate.swift in Sources */,
+				501E42B51C7CD65C00DF71EC /* LoggingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,10 +1,10 @@
 PODS:
-  - SwiftyTimer (1.2.0)
+  - NotificationAlertView (0.0.3)
 
 DEPENDENCIES:
-  - SwiftyTimer
+  - NotificationAlertView
 
 SPEC CHECKSUMS:
-  SwiftyTimer: 5453593e0aaacfb1611fb6986d257281140913bb
+  NotificationAlertView: 568e8e3dba6e850362bf19826cbec3451034a270
 
 COCOAPODS: 0.39.0
