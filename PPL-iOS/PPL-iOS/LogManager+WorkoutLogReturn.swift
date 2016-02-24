@@ -12,19 +12,18 @@ extension LogManager {
     func recentWorkoutLogs() -> [WorkoutLog]? {
         var recentWorkoutLogsCopy = self.collectionOfWorkoutLogs.copyToArray() as! [WorkoutLog]
         var recentWorkoutLogs = [WorkoutLog]()
-        
-        
-        if recentWorkoutLogsCopy.isEmpty {
+
+        guard !recentWorkoutLogsCopy.isEmpty else{
             return nil
-        } else if recentWorkoutLogsCopy.count == 1 {
-            recentWorkoutLogs.append(recentWorkoutLogsCopy.first!)
-            print(recentWorkoutLogs.first!.workout.typeOfWorkout)
-            return recentWorkoutLogs
-        } else {
-            recentWorkoutLogs.append(recentWorkoutLogsCopy.popLast()!)
-            recentWorkoutLogs.append(recentWorkoutLogsCopy.popLast()!)
-            print(recentWorkoutLogs.first!.workout.typeOfWorkout)
-            return recentWorkoutLogs
         }
+        
+        recentWorkoutLogs.append(recentWorkoutLogsCopy.popLast()!)
+
+        if !recentWorkoutLogsCopy.isEmpty {
+            recentWorkoutLogs.append(recentWorkoutLogsCopy.popLast()!)
+        }
+
+        print(recentWorkoutLogs.first!.workout.typeOfWorkout)
+        return recentWorkoutLogs
     }
 }
