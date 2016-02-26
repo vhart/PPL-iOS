@@ -9,22 +9,22 @@
 import UIKit
 import CoreData
 
-class WorkoutViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class WorkoutViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, LoggingViewControllerDelegate {
     @IBOutlet weak var collectionView: UICollectionView!
 
     var managedContext: NSManagedObjectContext!
     var count = 0
-    lazy var recentWorkoutLogs: [WorkoutLog]? = {
+    var recentWorkoutLogs: [WorkoutLog]? {
+        get {
+            return LogManager.sharedInstance.recentWorkoutLogs()
+        }
         
-        return LogManager.sharedInstance.recentWorkoutLogs()
-        
-    }()
+    }
     var currentWorkoutLog: WorkoutLog!
     
-    override func viewDidLoad() {
-       
-        
-        
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.hidden = false
         
         
     }
@@ -38,23 +38,24 @@ class WorkoutViewController: UIViewController, UICollectionViewDelegate, UIColle
         }
     }
     
+    func loggedWorkout(context: NSManagedObjectContext) {
+        managedContext = context
+        currentWorkoutLog = LogManager.sharedInstance.createWorkoutLog(managedContext)
+        print(currentWorkoutLog.workout.typeOfWorkout)
+        collectionView.reloadData()
+    }
+    
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         
-        if let numberOfWorkoutLogs = recentWorkoutLogs?.count where numberOfWorkoutLogs > 1{
-            
-            if numberOfWorkoutLogs == 1 {
-                return numberOfWorkoutLogs
-            } else {
-                return numberOfWorkoutLogs + 1
-            }
-            
+        if let numberOfWorkoutLogs = recentWorkoutLogs?.count where numberOfWorkoutLogs > 0 {
+           return numberOfWorkoutLogs + 1
         }
         
-        return 2
+        return 1
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -86,7 +87,9 @@ class WorkoutViewController: UIViewController, UICollectionViewDelegate, UIColle
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "LogWorkout" {
+            self.tabBarController?.tabBar.hidden = true
             let loggingViewController = segue.destinationViewController as! LoggingViewController
+            loggingViewController.delegate = self
             loggingViewController.workoutLog = currentWorkoutLog
             loggingViewController.managedContext = managedContext
         }

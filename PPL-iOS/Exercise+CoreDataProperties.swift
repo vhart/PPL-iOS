@@ -2,7 +2,7 @@
 //  Exercise+CoreDataProperties.swift
 //  PPL-iOS
 //
-//  Created by Jovanny Espinal on 2/17/16.
+//  Created by Jovanny Espinal on 2/25/16.
 //  Copyright © 2016 Jovanny Espinal. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -14,10 +14,11 @@ import CoreData
 
 extension Exercise {
 
-    @NSManaged var exerciseName: String
-    @NSManaged var weight: Double
     @NSManaged var didCompleteAllSets: Bool
+    @NSManaged var exerciseName: String
     @NSManaged var progressionSchemeRaw: NSNumber
+    @NSManaged var weight: Double
     @NSManaged var numberOfSets: NSOrderedSet
+    @NSManaged var workout: Workout
 
 }

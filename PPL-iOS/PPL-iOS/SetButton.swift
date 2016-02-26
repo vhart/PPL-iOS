@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 
 class SetButton: UIButton {
-    var repCount: Int16 = 0
+    var numberOfReps: Int16 = 0
     var exerciseIndex: Int16 = 100
+    var setIndex: Int16 = 100
+    var repsCompleted: Int16 = 0
+    var firstAttempt = true
 }

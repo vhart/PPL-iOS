@@ -40,5 +40,19 @@ class Workout: NSManagedObject {
             createAlternatePushRoutine(context)
         }
     }
+    
+    func checkForExerciseCompletion() {
+        
+        let mutableExercises = exercises.mutableCopy() as! NSMutableOrderedSet
+        
+        for exercise in mutableExercises {
+            
+            let exercise = exercise as! Exercise
+            exercise.checkForCompletionOfSets()
+            print("exercise completion = \(exercise.didCompleteAllSets)")
+        }
+        
+        exercises = mutableExercises
+    }
 }
 

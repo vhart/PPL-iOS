@@ -10,7 +10,10 @@
     </entity>
     <entity name="Set" representedClassName=".Set" syncable="YES">
         <attribute name="didCompleteSet" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="firstAttempt" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="numberOfReps" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="repsCompleted" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="setIndex" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="exercise" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Exercise" inverseName="numberOfSets" inverseEntity="Exercise" syncable="YES"/>
     </entity>
     <entity name="Workout" representedClassName=".Workout" syncable="YES">
@@ -25,7 +28,7 @@
     </entity>
     <elements>
         <element name="Exercise" positionX="-207" positionY="-198" width="126" height="135"/>
-        <element name="Set" positionX="-207" positionY="-27" width="128" height="90"/>
+        <element name="Set" positionX="-207" positionY="-27" width="128" height="133"/>
         <element name="Workout" positionX="-198" positionY="-336" width="128" height="90"/>
         <element name="WorkoutLog" positionX="-191" positionY="-459" width="128" height="90"/>
     </elements>

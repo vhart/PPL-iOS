@@ -37,16 +37,18 @@ class WorkoutLog: NSManagedObject {
     func resetExerciseSets(var previousWorkoutExercises: NSOrderedSet)
     {
         resetExerciseSetsHelper(&previousWorkoutExercises)
-
+        
         workout.exercises = previousWorkoutExercises
     }
     
     func resetExerciseSetsHelper(inout exercises: NSOrderedSet)
     {
         if let exercises = exercises.array as? [Exercise] {
-           
+            
             for exercise in exercises {
-               exercise.resetExerciseSetCompletion()
+                
+                exercise.progressWeight()
+                exercise.resetExerciseSetCompletion()
             }
         }
     }

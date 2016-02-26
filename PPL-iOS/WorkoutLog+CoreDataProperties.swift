@@ -2,7 +2,7 @@
 //  WorkoutLog+CoreDataProperties.swift
 //  PPL-iOS
 //
-//  Created by Jovanny Espinal on 2/17/16.
+//  Created by Jovanny Espinal on 2/25/16.
 //  Copyright © 2016 Jovanny Espinal. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu

@@ -21,9 +21,17 @@ class Set: NSManagedObject {
         self.init(entity: entity!, insertIntoManagedObjectContext: context)
         
         numberOfReps = reps
+        repsCompleted = 0
+        firstAttempt = true
+        
+        
     }
     
     func checkForCompletion(numberOfRepsCompleted: Int16) {
         didCompleteSet = numberOfRepsCompleted >= numberOfReps
+    }
+    
+    func resetSetCompletion(){
+        didCompleteSet = false
     }
 }

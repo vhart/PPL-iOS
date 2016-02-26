@@ -26,8 +26,9 @@ class Exercise: NSManagedObject {
         
         let mutableNumberOfSets = self.numberOfSets.mutableCopy() as! NSMutableOrderedSet
         
-        for _ in 1...numberOfSets {
+        for i in 0..<numberOfSets {
             let setTemp = Set(reps: numberOfReps, context: context)
+            setTemp.setIndex = Int16(i)
             mutableNumberOfSets.addObject(setTemp)
         }
         
@@ -48,6 +49,12 @@ class Exercise: NSManagedObject {
     func resetExerciseSetCompletion()
     {
         didCompleteAllSets = false
+        
+        for set in numberOfSets {
+            let set = set as! Set
+            
+            set.resetSetCompletion()
+        }
     }
 }
 
@@ -55,6 +62,8 @@ extension Exercise {
     func checkForCompletionOfSets()
     {
         didCompleteAllSets = numberOfCompletedSets(numberOfSets) == Int16(numberOfSets.count)
+        
+        
     }
     
     func numberOfCompletedSets(numberOfSets: NSOrderedSet) -> Int16
@@ -74,6 +83,8 @@ extension Exercise {
     
     func calculateProgression()
     {
+        
+        print("//////// EXERCISE PROGRESSED")
         switch progressionScheme {
         case .UpperBody:
             weight += 5.0
