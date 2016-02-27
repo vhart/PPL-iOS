@@ -10,8 +10,6 @@
 		501E42A21C7C1A1700DF71EC /* Double+CleanValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E42A11C7C1A1700DF71EC /* Double+CleanValue.swift */; };
 		501E42A61C7C1ECE00DF71EC /* LoggingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E42A51C7C1ECE00DF71EC /* LoggingCollectionViewCell.swift */; };
 		501E42AA1C7C8D0800DF71EC /* SetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E42A91C7C8D0800DF71EC /* SetButton.swift */; };
-		501E42AD1C7CB72C00DF71EC /* APNotificationAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E42AB1C7CB72C00DF71EC /* APNotificationAlertView.swift */; };
-		501E42AE1C7CB72C00DF71EC /* APNotificationAlertViewBaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E42AC1C7CB72C00DF71EC /* APNotificationAlertViewBaseExtension.swift */; };
 		501E42B31C7CCC2000DF71EC /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E42B21C7CCC2000DF71EC /* WorkoutViewController.swift */; };
 		501E42B51C7CD65C00DF71EC /* LoggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E42B41C7CD65C00DF71EC /* LoggingViewController.swift */; };
 		50363B691C7A6D11008FDE7D /* NSOrderedSet+SetToArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50363B681C7A6D11008FDE7D /* NSOrderedSet+SetToArray.swift */; };
@@ -56,8 +54,6 @@
 		501E42A11C7C1A1700DF71EC /* Double+CleanValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+CleanValue.swift"; sourceTree = "<group>"; };
 		501E42A51C7C1ECE00DF71EC /* LoggingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingCollectionViewCell.swift; sourceTree = "<group>"; };
 		501E42A91C7C8D0800DF71EC /* SetButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetButton.swift; sourceTree = "<group>"; };
-		501E42AB1C7CB72C00DF71EC /* APNotificationAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APNotificationAlertView.swift; path = ../Pods/NotificationAlertView/APNotificationAlertView/APNotificationAlertView.swift; sourceTree = "<group>"; };
-		501E42AC1C7CB72C00DF71EC /* APNotificationAlertViewBaseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APNotificationAlertViewBaseExtension.swift; path = ../Pods/NotificationAlertView/APNotificationAlertView/APNotificationAlertViewBaseExtension.swift; sourceTree = "<group>"; };
 		501E42B21C7CCC2000DF71EC /* WorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 		501E42B41C7CD65C00DF71EC /* LoggingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingViewController.swift; sourceTree = "<group>"; };
 		50363B681C7A6D11008FDE7D /* NSOrderedSet+SetToArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSOrderedSet+SetToArray.swift"; sourceTree = "<group>"; };
@@ -161,8 +157,6 @@
 				501E42A51C7C1ECE00DF71EC /* LoggingCollectionViewCell.swift */,
 				50E784BA1C7E98E8008DB49A /* WeightChangeViewController.swift */,
 				50386E951C7BA7F600735975 /* HistoryViewController.swift */,
-				501E42AB1C7CB72C00DF71EC /* APNotificationAlertView.swift */,
-				501E42AC1C7CB72C00DF71EC /* APNotificationAlertViewBaseExtension.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -421,12 +415,10 @@
 				50CD2C2A1C756E1800E17B9E /* WorkoutLog.swift in Sources */,
 				50CD2BC51C754B5200E17B9E /* ViewController.swift in Sources */,
 				50CD2C301C756F9400E17B9E /* Workout+EnumValue.swift in Sources */,
-				501E42AE1C7CB72C00DF71EC /* APNotificationAlertViewBaseExtension.swift in Sources */,
 				50A91CE31C7619D00016002B /* CoreDataStack.swift in Sources */,
 				50363B851C7B7643008FDE7D /* LogManager+ExerciseUpdateHelpers.swift in Sources */,
 				50386E9A1C7BAE8200735975 /* WorkoutLogCollectionViewCell.swift in Sources */,
 				50E785031C7FA2FC008DB49A /* Set+CoreDataProperties.swift in Sources */,
-				501E42AD1C7CB72C00DF71EC /* APNotificationAlertView.swift in Sources */,
 				50CD2C4B1C758E0000E17B9E /* LogManager.swift in Sources */,
 				50CD2C471C7582CE00E17B9E /* Workout.swift in Sources */,
 				50E784BB1C7E98E8008DB49A /* WeightChangeViewController.swift in Sources */,
@@ -463,6 +455,7 @@
 /* Begin XCBuildConfiguration section */
 		50CD2BD21C754B5200E17B9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96C05875B06F7C4E15F461F4 /* Pods-PPL-iOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -508,6 +501,7 @@
 		};
 		50CD2BD31C754B5200E17B9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F4897E1632C359D49E09065 /* Pods-PPL-iOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";

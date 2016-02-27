@@ -45,9 +45,10 @@ class LoggingViewController: UIViewController, UICollectionViewDataSource, UICol
         super.viewWillAppear(animated)
     }
     
-    func setLogged(sender: SetButton) {
+    func setLogged(sender: SetButton, set: Set) {
         startTimer()
-        logExerciseSet(sender)
+        set.checkForCompletion(set.repsCompleted)
+        logExerciseSet(sender, set: set)
         
         
     }
@@ -98,60 +99,50 @@ class LoggingViewController: UIViewController, UICollectionViewDataSource, UICol
         self.performSegueWithIdentifier("ChangeWeight", sender:dataobject )
     }
     
-    func logExerciseSet(setButton: SetButton) {
-        let index = Int(setButton.exerciseIndex)
-        let setIndex = Int(setButton.setIndex)
-        
-        //Create mutable exercises
-        let mutableExercises = workoutLog!.workout.exercises.mutableCopy() as! NSMutableOrderedSet
-        
-        //Create exercise
-        let exercise = mutableExercises[index] as! Exercise
-        
-        //Create mutable sets
-        let sets = exercise.numberOfSets as! NSMutableOrderedSet
-        
-        //Create set
-        let set = sets[setIndex] as! Set
-        
-        
-        var numberOfReps = setButton.repsCompleted + 1
-        
-        if numberOfReps > setButton.numberOfReps {
-            numberOfReps = 0
-        }
-        
-        set.repsCompleted = numberOfReps
-        set.firstAttempt = false
-        set.checkForCompletion(numberOfReps)
-        print(set.didCompleteSet)
-        print(set.repsCompleted)
-        
-        //Turn set into anyObject
-        let setA = set as AnyObject
-        
-        //Replace object at index in mutable sets with set
-        sets.replaceObjectAtIndex(setIndex, withObject: setA)
-        
-        //Set exercise sets to the new edited sets
-        exercise.numberOfSets = sets
-        
-        //Turn exercise into anyObject
-        let exerciseA = exercise as AnyObject
-        
-        //Replace object at index in mutable exercises with exercise
-        mutableExercises.replaceObjectAtIndex(index, withObject: exerciseA)
-        
-        
-        //Set exercises to edited exercises
-        workoutLog!.workout.exercises = mutableExercises
-        
-        //        do {
-        //            try managedContext.save()
-        //        } catch let error as NSError {
-        //            print("Could not save: \(error)")
-        //        }
-        
+    func logExerciseSet(setButton: SetButton, set: Set) {
+//        let index = Int(setButton.exerciseIndex)
+//        let setIndex = Int(setButton.setIndex)
+//        
+//        //Create mutable exercises
+//        let mutableExercises = workoutLog!.workout.exercises.mutableCopy() as! NSMutableOrderedSet
+//        
+//        //Create exercise
+//        let exercise = mutableExercises[index] as! Exercise
+//        
+//        //Create mutable sets
+//        let sets = exercise.numberOfSets as! NSMutableOrderedSet
+//        
+//        set.repsCompleted = numberOfReps
+//        set.firstAttempt = false
+//        set.checkForCompletion(set.repsCompleted)
+//        print(set.didCompleteSet)
+//        print(set.repsCompleted)
+//        
+//        //Turn set into anyObject
+//        let setA = set as AnyObject
+//        
+//        //Replace object at index in mutable sets with set
+//        sets.replaceObjectAtIndex(setIndex, withObject: setA)
+//        
+//        //Set exercise sets to the new edited sets
+//        exercise.numberOfSets = sets
+//        
+//        //Turn exercise into anyObject
+//        let exerciseA = exercise as AnyObject
+//        
+//        //Replace object at index in mutable exercises with exercise
+//        mutableExercises.replaceObjectAtIndex(index, withObject: exerciseA)
+//        
+//        
+//        //Set exercises to edited exercises
+//        workoutLog!.workout.exercises = mutableExercises
+//        
+//        //        do {
+//        //            try managedContext.save()
+//        //        } catch let error as NSError {
+//        //            print("Could not save: \(error)")
+//        //        }
+//        
         
     }
     
@@ -181,16 +172,16 @@ class LoggingViewController: UIViewController, UICollectionViewDataSource, UICol
         
     }
     
-    func createTimerLabel() -> APNotificationAlertView {
-        let popup = APNotificationAlertView.popupDialogWithText("\(self.count) Nice job completing the set. If it was easy, rest 90 sec. If not, 3 min. ", options: ["Done"])
-        popup.customCompletionHandler = {
-            (index: Int) -> Void in
-            
-            APNotificationAlertView.hideAnimated(true)
-        }
-        
-        return popup
-    }
+//    func createTimerLabel() -> APNotificationAlertView {
+//        let popup = APNotificationAlertView.popupDialogWithText("\(self.count) Nice job completing the set. If it was easy, rest 90 sec. If not, 3 min. ", options: ["Done"])
+//        popup.customCompletionHandler = {
+//            (index: Int) -> Void in
+//            
+//            APNotificationAlertView.hideAnimated(true)
+//        }
+//        
+//        return popup
+//    }
     
     
     func countUp(){
@@ -221,6 +212,7 @@ class LoggingViewController: UIViewController, UICollectionViewDataSource, UICol
         
         
         cell.delegate = self
+        cell.sets = sets
         
         cell.exerciseNameLabel.text = exercise.exerciseName
         cell.setxRepsxWeightButton.setTitle("\(sets.count)x\(set.numberOfReps) \(exercise.weight.cleanValue)lbs", forState: .Normal)

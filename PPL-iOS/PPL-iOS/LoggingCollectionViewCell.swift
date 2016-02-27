@@ -1,19 +1,19 @@
  //
-//  LoggingCollectionViewCell.swift
-//  PPL-iOS
-//
-//  Created by Jovanny Espinal on 2/22/16.
-//  Copyright © 2016 Jovanny Espinal. All rights reserved.
-//
-
-import UIKit
-
-protocol LoggingButtonDelegate {
-    func setLogged(sender: SetButton)
+ //  LoggingCollectionViewCell.swift
+ //  PPL-iOS
+ //
+ //  Created by Jovanny Espinal on 2/22/16.
+ //  Copyright © 2016 Jovanny Espinal. All rights reserved.
+ //
+ 
+ import UIKit
+ 
+ protocol LoggingButtonDelegate {
+    func setLogged(sender: SetButton, set: Set)
     func callSegueFromCell(myData dataobject: AnyObject)
-}
-
-class LoggingCollectionViewCell: UICollectionViewCell {
+ }
+ 
+ class LoggingCollectionViewCell: UICollectionViewCell {
     
     
     @IBOutlet var setButtons: [SetButton]!
@@ -21,6 +21,7 @@ class LoggingCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var setxRepsxWeightButton: SetButton!
     var delegate: LoggingButtonDelegate?
     var numberOfSets: Int16 = 0
+    var sets: [Set]!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,11 +30,11 @@ class LoggingCollectionViewCell: UICollectionViewCell {
     }
     
     func formatButtons(){
-        for i in 0..<numberOfSets {
+        for i in 0..<sets.count {
             formatButton(setButtons[Int(i)])
         }
         
-        for i in 0..<5-numberOfSets {
+        for i in 0..<5-sets.count {
             disableButton(setButtons[Int(5-i-1)])
         }
     }
@@ -45,10 +46,16 @@ class LoggingCollectionViewCell: UICollectionViewCell {
     }
     
     func formatButton(button:SetButton) {
+        let set = sets[Int(button.setIndex)]
+        
         button.layer.cornerRadius = 0.5 * button.bounds.size.width
         
-        if button.firstAttempt {
-            formatInitialButtonState(button)
+        if set.firstAttempt {
+            if !(set.repsCompleted == set.numberOfReps){
+                formatInitialButtonState(button)
+            } else {
+                formatOngoingButtonState(button)
+            }
         } else {
             formatOngoingButtonState(button)
         }
@@ -56,23 +63,29 @@ class LoggingCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func setLogged(sender: SetButton) {
-
-        if sender.repsCompleted < 0 {
-            formatInitialButtonState(sender)
-            sender.repsCompleted = sender.numberOfReps
-        } else if sender.repsCompleted == 0 && sender.firstAttempt {
-            sender.repsCompleted = sender.numberOfReps
+        let set = sets[Int(sender.setIndex)]
+        
+        
+        if set.repsCompleted == 0 && set.firstAttempt {
+            set.repsCompleted = set.numberOfReps
             formatOngoingButtonState(sender)
-            sender.repsCompleted -= 1
         } else {
-            formatOngoingButtonState(sender)
-            sender.repsCompleted -= 1
+            set.repsCompleted -= 1
+            
+            if set.repsCompleted < 0 {
+                set.repsCompleted = 0
+                set.firstAttempt = true
+                formatInitialButtonState(sender)
+                
+            } else {
+                formatOngoingButtonState(sender)
+                set.firstAttempt = false
+            }
+            
             
         }
         
-        
-        sender.firstAttempt = false
-        self.delegate?.setLogged(sender)
+        self.delegate?.setLogged(sender, set: set)
     }
     
     
@@ -91,7 +104,9 @@ class LoggingCollectionViewCell: UICollectionViewCell {
     }
     
     func updateLabel(button: SetButton) {
-        button.setTitle("\(button.repsCompleted)", forState: .Normal)
+        let set = sets[Int(button.setIndex)]
+        
+        button.setTitle("\(set.repsCompleted)", forState: .Normal)
     }
     
     
@@ -102,6 +117,6 @@ class LoggingCollectionViewCell: UICollectionViewCell {
         
     }
     
-}
-
-
+ }
+ 
+ 

@@ -32,6 +32,8 @@ class Set: NSManagedObject {
     }
     
     func resetSetCompletion(){
+        repsCompleted = 0
+        firstAttempt = true
         didCompleteSet = false
     }
 }
