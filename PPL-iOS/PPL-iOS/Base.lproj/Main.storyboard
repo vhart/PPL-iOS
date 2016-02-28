@@ -577,163 +577,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nax-io-dWo">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="502"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="483" id="Rlc-ZK-pAs"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iQv-oY-gBE">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="8" minY="8" maxX="8" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LoggingCell" id="eoS-XQ-zHe" customClass="LoggingCollectionViewCell" customModule="PPL_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="72" width="584" height="124"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="584" height="124"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ExerciseName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abQ-UF-ahP">
-                                                    <rect key="frame" x="20" y="8" width="109" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZmD-GK-XNn" customClass="SetButton" customModule="PPL_iOS" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="66" width="50" height="50"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="D4V-uK-que"/>
-                                                        <constraint firstAttribute="width" constant="50" id="vEP-C2-AEf"/>
-                                                    </constraints>
-                                                    <state key="normal" title="Button"/>
-                                                    <connections>
-                                                        <action selector="setLogged:" destination="eoS-XQ-zHe" eventType="touchUpInside" id="CiA-aH-uh2"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERd-GC-OeT" customClass="SetButton" customModule="PPL_iOS" customModuleProvider="target">
-                                                    <rect key="frame" x="90" y="66" width="50" height="50"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="1PT-vE-SFg"/>
-                                                        <constraint firstAttribute="height" constant="50" id="UkK-po-nzg"/>
-                                                    </constraints>
-                                                    <connections>
-                                                        <action selector="setLogged:" destination="eoS-XQ-zHe" eventType="touchUpInside" id="cgG-5h-Cfb"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFX-q7-Ve5" customClass="SetButton" customModule="PPL_iOS" customModuleProvider="target">
-                                                    <rect key="frame" x="267" y="66" width="50" height="50"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="LDr-VC-9ku"/>
-                                                        <constraint firstAttribute="width" constant="50" id="rfU-VQ-U85"/>
-                                                    </constraints>
-                                                    <connections>
-                                                        <action selector="setLogged:" destination="eoS-XQ-zHe" eventType="touchUpInside" id="wBT-VE-Rmn"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BI-Bx-yqx" customClass="SetButton" customModule="PPL_iOS" customModuleProvider="target">
-                                                    <rect key="frame" x="452" y="66" width="50" height="50"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="0iM-e2-C6w"/>
-                                                        <constraint firstAttribute="width" constant="50" id="LW3-dR-geo"/>
-                                                    </constraints>
-                                                    <connections>
-                                                        <action selector="setLogged:" destination="eoS-XQ-zHe" eventType="touchUpInside" id="cRg-A8-EGL"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izk-jY-eIH" customClass="SetButton" customModule="PPL_iOS" customModuleProvider="target">
-                                                    <rect key="frame" x="522" y="66" width="50" height="50"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="AxP-i3-8Fg"/>
-                                                        <constraint firstAttribute="height" constant="50" id="hPP-q9-7qt"/>
-                                                    </constraints>
-                                                    <connections>
-                                                        <action selector="setLogged:" destination="eoS-XQ-zHe" eventType="touchUpInside" id="MkS-DL-oRa"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kjz-aa-fBB" customClass="SetButton" customModule="PPL_iOS" customModuleProvider="target">
-                                                    <rect key="frame" x="478" y="8" width="94" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="20.5" id="iR1-Zi-yuL"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <state key="normal" title="5x20 130lbs"/>
-                                                    <connections>
-                                                        <action selector="weightButtonTapped:" destination="eoS-XQ-zHe" eventType="touchUpInside" id="4S8-Ry-bfA"/>
-                                                        <segue destination="tiN-Pd-QdL" kind="presentation" identifier="ChangeWeight" id="cIv-Db-kbM"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="Kjz-aa-fBB" secondAttribute="trailing" constant="12" id="7k1-J0-ANZ"/>
-                                            <constraint firstItem="Kjz-aa-fBB" firstAttribute="trailing" secondItem="eoS-XQ-zHe" secondAttribute="trailingMargin" id="8WS-Gp-gta"/>
-                                            <constraint firstItem="izk-jY-eIH" firstAttribute="centerY" secondItem="eoS-XQ-zHe" secondAttribute="centerY" id="DKz-y8-ysB"/>
-                                            <constraint firstItem="abQ-UF-ahP" firstAttribute="leading" secondItem="eoS-XQ-zHe" secondAttribute="leadingMargin" constant="12" id="HxP-o9-Pc2"/>
-                                            <constraint firstItem="ERd-GC-OeT" firstAttribute="bottom" secondItem="eoS-XQ-zHe" secondAttribute="bottomMargin" id="I52-5T-Nzy"/>
-                                            <constraint firstItem="ERd-GC-OeT" firstAttribute="centerY" secondItem="eoS-XQ-zHe" secondAttribute="centerY" id="LzN-Dh-gGg"/>
-                                            <constraint firstItem="ZmD-GK-XNn" firstAttribute="leading" secondItem="abQ-UF-ahP" secondAttribute="leading" id="Mi9-cs-idV"/>
-                                            <constraint firstItem="Kjz-aa-fBB" firstAttribute="top" secondItem="eoS-XQ-zHe" secondAttribute="topMargin" id="Noy-T1-jHO"/>
-                                            <constraint firstItem="ZmD-GK-XNn" firstAttribute="bottom" secondItem="eoS-XQ-zHe" secondAttribute="bottomMargin" id="RN2-lY-hqv"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="ZmD-GK-XNn" secondAttribute="bottom" constant="39" id="Rki-lO-faQ"/>
-                                            <constraint firstItem="oFX-q7-Ve5" firstAttribute="centerY" secondItem="eoS-XQ-zHe" secondAttribute="centerY" id="WQa-zw-Au9"/>
-                                            <constraint firstItem="8BI-Bx-yqx" firstAttribute="bottom" secondItem="eoS-XQ-zHe" secondAttribute="bottomMargin" id="YSK-SE-xTn"/>
-                                            <constraint firstItem="izk-jY-eIH" firstAttribute="leading" secondItem="8BI-Bx-yqx" secondAttribute="trailing" constant="56" id="ZBF-6e-z6j"/>
-                                            <constraint firstItem="oFX-q7-Ve5" firstAttribute="leading" secondItem="ERd-GC-OeT" secondAttribute="trailing" constant="79" id="iX2-lG-LKS"/>
-                                            <constraint firstItem="abQ-UF-ahP" firstAttribute="top" secondItem="eoS-XQ-zHe" secondAttribute="topMargin" id="j53-0O-XkO"/>
-                                            <constraint firstItem="ERd-GC-OeT" firstAttribute="top" secondItem="eoS-XQ-zHe" secondAttribute="topMargin" constant="39" id="jVZ-iM-5LM"/>
-                                            <constraint firstItem="oFX-q7-Ve5" firstAttribute="centerX" secondItem="eoS-XQ-zHe" secondAttribute="centerX" id="jo6-JL-nrG"/>
-                                            <constraint firstItem="oFX-q7-Ve5" firstAttribute="bottom" secondItem="eoS-XQ-zHe" secondAttribute="bottomMargin" id="ll6-nX-Yfi"/>
-                                            <constraint firstItem="8BI-Bx-yqx" firstAttribute="centerY" secondItem="eoS-XQ-zHe" secondAttribute="centerY" id="pMJ-1J-cBo"/>
-                                            <constraint firstItem="izk-jY-eIH" firstAttribute="trailing" secondItem="Kjz-aa-fBB" secondAttribute="trailing" id="vxc-8L-tAL"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="izk-jY-eIH" secondAttribute="bottom" constant="39" id="yYL-T5-IBG"/>
-                                            <constraint firstItem="izk-jY-eIH" firstAttribute="leading" secondItem="8BI-Bx-yqx" secondAttribute="trailing" constant="20" id="ykX-2B-Eh0"/>
-                                            <constraint firstItem="izk-jY-eIH" firstAttribute="bottom" secondItem="eoS-XQ-zHe" secondAttribute="bottomMargin" id="ywa-Rj-eyN"/>
-                                            <constraint firstItem="ERd-GC-OeT" firstAttribute="leading" secondItem="ZmD-GK-XNn" secondAttribute="trailing" constant="20" id="zRF-GK-QDC"/>
-                                            <constraint firstItem="8BI-Bx-yqx" firstAttribute="leading" secondItem="oFX-q7-Ve5" secondAttribute="trailing" constant="79" id="zZy-Db-qwH"/>
-                                        </constraints>
-                                        <size key="customSize" width="584" height="124"/>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="Rki-lO-faQ"/>
-                                                <exclude reference="LzN-Dh-gGg"/>
-                                                <exclude reference="jVZ-iM-5LM"/>
-                                                <exclude reference="WQa-zw-Au9"/>
-                                                <exclude reference="iX2-lG-LKS"/>
-                                                <exclude reference="pMJ-1J-cBo"/>
-                                                <exclude reference="zZy-Db-qwH"/>
-                                                <exclude reference="8WS-Gp-gta"/>
-                                                <exclude reference="DKz-y8-ysB"/>
-                                                <exclude reference="ZBF-6e-z6j"/>
-                                                <exclude reference="yYL-T5-IBG"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <outlet property="exerciseNameLabel" destination="abQ-UF-ahP" id="g9x-PU-3qv"/>
-                                            <outlet property="setxRepsxWeightButton" destination="Kjz-aa-fBB" id="gJM-w5-CZ6"/>
-                                            <outletCollection property="setButtons" destination="ZmD-GK-XNn" collectionClass="NSMutableArray" id="HFm-rl-2nd"/>
-                                            <outletCollection property="setButtons" destination="ERd-GC-OeT" collectionClass="NSMutableArray" id="Bto-4p-6DA"/>
-                                            <outletCollection property="setButtons" destination="oFX-q7-Ve5" collectionClass="NSMutableArray" id="B8o-d8-BDn"/>
-                                            <outletCollection property="setButtons" destination="8BI-Bx-yqx" collectionClass="NSMutableArray" id="GKR-fu-IHH"/>
-                                            <outletCollection property="setButtons" destination="izk-jY-eIH" collectionClass="NSMutableArray" id="LVL-vS-Jem"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Rlc-ZK-pAs"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <outlet property="dataSource" destination="3Hv-fd-YgP" id="C47-wS-H5g"/>
-                                    <outlet property="delegate" destination="3Hv-fd-YgP" id="eic-JT-6xE"/>
-                                </connections>
-                            </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Baa-42-I8A">
                                 <rect key="frame" x="0.0" y="502" width="600" height="49"/>
                                 <subviews>
@@ -780,10 +623,73 @@
                                             <constraint firstItem="jQm-cg-ziN" firstAttribute="leading" secondItem="WEg-oc-XLs" secondAttribute="leading" id="nSD-4r-LJD"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mta-f5-7E7">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfd-l8-rXM">
+                                                <rect key="frame" x="572" y="15" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="ogy-om-Rnr"/>
+                                                    <constraint firstAttribute="height" constant="20" id="ybw-O4-SnA"/>
+                                                </constraints>
+                                                <state key="normal" image="Cancel-50-2"/>
+                                                <connections>
+                                                    <action selector="dismissTimerButtonTapped:" destination="3Hv-fd-YgP" eventType="touchUpInside" id="gSM-ul-YgN"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Bv-pn-JYL">
+                                                <rect key="frame" x="8" y="11" width="51.5" height="25.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="51.5" id="FH7-kQ-zGw"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cwE-Yy-gAo">
+                                                <rect key="frame" x="67" y="0.0" width="250" height="49"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nice job meeting the rep goal! If it was easy, rest 90 sec. If not, 5 min." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8H-0E-vqg">
+                                                        <rect key="frame" x="0.0" y="8" width="242" height="31.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="U8H-0E-vqg" firstAttribute="leading" secondItem="cwE-Yy-gAo" secondAttribute="leading" id="8pY-vg-zLF"/>
+                                                    <constraint firstItem="U8H-0E-vqg" firstAttribute="top" secondItem="cwE-Yy-gAo" secondAttribute="top" constant="8" id="At2-Ag-wBO"/>
+                                                    <constraint firstAttribute="width" constant="250" id="IaN-he-6AO"/>
+                                                    <constraint firstAttribute="trailing" secondItem="U8H-0E-vqg" secondAttribute="trailing" constant="8" id="bP0-pm-gvZ"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="dfd-l8-rXM" firstAttribute="leading" secondItem="cwE-Yy-gAo" secondAttribute="trailing" constant="8" id="2UE-9q-zye"/>
+                                            <constraint firstAttribute="trailing" secondItem="dfd-l8-rXM" secondAttribute="trailing" constant="8" id="7Wj-tl-lWP"/>
+                                            <constraint firstItem="cwE-Yy-gAo" firstAttribute="leading" secondItem="2Bv-pn-JYL" secondAttribute="trailing" constant="8" id="Arg-RR-Bol"/>
+                                            <constraint firstItem="2Bv-pn-JYL" firstAttribute="leading" secondItem="mta-f5-7E7" secondAttribute="leadingMargin" id="Kdd-7W-Eeq"/>
+                                            <constraint firstItem="2Bv-pn-JYL" firstAttribute="centerY" secondItem="mta-f5-7E7" secondAttribute="centerY" id="RRh-4d-4py"/>
+                                            <constraint firstItem="dfd-l8-rXM" firstAttribute="centerY" secondItem="mta-f5-7E7" secondAttribute="centerY" id="Vn8-eY-Tx2"/>
+                                            <constraint firstAttribute="height" constant="49" id="erN-gv-reS"/>
+                                            <constraint firstItem="cwE-Yy-gAo" firstAttribute="top" secondItem="mta-f5-7E7" secondAttribute="top" id="nos-SY-yD5"/>
+                                            <constraint firstAttribute="bottom" secondItem="cwE-Yy-gAo" secondAttribute="bottom" id="tK2-5c-5f7"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="2UE-9q-zye"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="mta-f5-7E7" firstAttribute="top" secondItem="Baa-42-I8A" secondAttribute="top" id="1Eb-n1-bMy"/>
+                                    <constraint firstItem="mta-f5-7E7" firstAttribute="leading" secondItem="Baa-42-I8A" secondAttribute="leading" id="58e-Lz-nXf"/>
                                     <constraint firstItem="WEg-oc-XLs" firstAttribute="leading" secondItem="Baa-42-I8A" secondAttribute="leadingMargin" id="8gn-Gn-rCj"/>
+                                    <constraint firstAttribute="trailing" secondItem="mta-f5-7E7" secondAttribute="trailing" id="NAk-YZ-UMZ"/>
                                     <constraint firstItem="WEg-oc-XLs" firstAttribute="leading" secondItem="Baa-42-I8A" secondAttribute="leading" id="aSf-gG-prJ"/>
                                     <constraint firstAttribute="bottom" secondItem="WEg-oc-XLs" secondAttribute="bottom" id="bfn-XI-hfx"/>
                                     <constraint firstAttribute="bottom" secondItem="aoc-xh-3P9" secondAttribute="bottom" id="cdw-oD-Sgx"/>
@@ -796,6 +702,7 @@
                                     <constraint firstItem="aoc-xh-3P9" firstAttribute="top" secondItem="Baa-42-I8A" secondAttribute="top" id="sns-lh-pha"/>
                                     <constraint firstAttribute="trailing" secondItem="aoc-xh-3P9" secondAttribute="trailing" id="vit-WV-WfL"/>
                                     <constraint firstItem="aoc-xh-3P9" firstAttribute="leading" secondItem="WEg-oc-XLs" secondAttribute="trailing" id="yvn-rE-Of6"/>
+                                    <constraint firstAttribute="bottom" secondItem="mta-f5-7E7" secondAttribute="bottom" id="zqn-DA-GKL"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -805,6 +712,165 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nax-io-dWo">
+                                <rect key="frame" x="0.0" y="64" width="600" height="438"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="483" id="Rlc-ZK-pAs"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iQv-oY-gBE">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="8" minY="8" maxX="8" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LoggingCell" id="eoS-XQ-zHe" customClass="LoggingCollectionViewCell" customModule="PPL_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="8" width="584" height="124"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="584" height="124"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ExerciseName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abQ-UF-ahP">
+                                                    <rect key="frame" x="20" y="8" width="109" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZmD-GK-XNn" customClass="SetButton" customModule="PPL_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="66" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="D4V-uK-que"/>
+                                                        <constraint firstAttribute="width" constant="50" id="vEP-C2-AEf"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="setLogged:" destination="eoS-XQ-zHe" eventType="touchUpInside" id="CiA-aH-uh2"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERd-GC-OeT" customClass="SetButton" customModule="PPL_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="90" y="66" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="1PT-vE-SFg"/>
+                                                        <constraint firstAttribute="height" constant="50" id="UkK-po-nzg"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <action selector="setLogged:" destination="eoS-XQ-zHe" eventType="touchUpInside" id="cgG-5h-Cfb"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFX-q7-Ve5" customClass="SetButton" customModule="PPL_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="267" y="66" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="LDr-VC-9ku"/>
+                                                        <constraint firstAttribute="width" constant="50" id="rfU-VQ-U85"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <action selector="setLogged:" destination="eoS-XQ-zHe" eventType="touchUpInside" id="wBT-VE-Rmn"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BI-Bx-yqx" customClass="SetButton" customModule="PPL_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="444" y="66" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="0iM-e2-C6w"/>
+                                                        <constraint firstAttribute="width" constant="50" id="LW3-dR-geo"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <action selector="setLogged:" destination="eoS-XQ-zHe" eventType="touchUpInside" id="cRg-A8-EGL"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izk-jY-eIH" customClass="SetButton" customModule="PPL_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="514" y="66" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="AxP-i3-8Fg"/>
+                                                        <constraint firstAttribute="height" constant="50" id="hPP-q9-7qt"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <action selector="setLogged:" destination="eoS-XQ-zHe" eventType="touchUpInside" id="MkS-DL-oRa"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kjz-aa-fBB" customClass="SetButton" customModule="PPL_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="470" y="8" width="94" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20.5" id="iR1-Zi-yuL"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <state key="normal" title="5x20 130lbs"/>
+                                                    <connections>
+                                                        <action selector="weightButtonTapped:" destination="eoS-XQ-zHe" eventType="touchUpInside" id="4S8-Ry-bfA"/>
+                                                        <segue destination="tiN-Pd-QdL" kind="presentation" identifier="ChangeWeight" id="cIv-Db-kbM"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Kjz-aa-fBB" secondAttribute="trailing" constant="12" id="7k1-J0-ANZ"/>
+                                            <constraint firstItem="Kjz-aa-fBB" firstAttribute="trailing" secondItem="eoS-XQ-zHe" secondAttribute="trailingMargin" id="8WS-Gp-gta"/>
+                                            <constraint firstItem="izk-jY-eIH" firstAttribute="centerY" secondItem="eoS-XQ-zHe" secondAttribute="centerY" id="DKz-y8-ysB"/>
+                                            <constraint firstItem="abQ-UF-ahP" firstAttribute="leading" secondItem="eoS-XQ-zHe" secondAttribute="leadingMargin" constant="12" id="HxP-o9-Pc2"/>
+                                            <constraint firstItem="ERd-GC-OeT" firstAttribute="bottom" secondItem="eoS-XQ-zHe" secondAttribute="bottomMargin" id="I52-5T-Nzy"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="Kjz-aa-fBB" secondAttribute="trailing" constant="12" id="Lpv-EY-Eeg"/>
+                                            <constraint firstItem="ERd-GC-OeT" firstAttribute="centerY" secondItem="eoS-XQ-zHe" secondAttribute="centerY" id="LzN-Dh-gGg"/>
+                                            <constraint firstItem="ZmD-GK-XNn" firstAttribute="leading" secondItem="abQ-UF-ahP" secondAttribute="leading" id="Mi9-cs-idV"/>
+                                            <constraint firstItem="Kjz-aa-fBB" firstAttribute="top" secondItem="eoS-XQ-zHe" secondAttribute="topMargin" id="Noy-T1-jHO"/>
+                                            <constraint firstItem="ZmD-GK-XNn" firstAttribute="bottom" secondItem="eoS-XQ-zHe" secondAttribute="bottomMargin" id="RN2-lY-hqv"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="ZmD-GK-XNn" secondAttribute="bottom" constant="39" id="Rki-lO-faQ"/>
+                                            <constraint firstItem="oFX-q7-Ve5" firstAttribute="centerY" secondItem="eoS-XQ-zHe" secondAttribute="centerY" id="WQa-zw-Au9"/>
+                                            <constraint firstItem="8BI-Bx-yqx" firstAttribute="bottom" secondItem="eoS-XQ-zHe" secondAttribute="bottomMargin" id="YSK-SE-xTn"/>
+                                            <constraint firstItem="izk-jY-eIH" firstAttribute="leading" secondItem="8BI-Bx-yqx" secondAttribute="trailing" constant="56" id="ZBF-6e-z6j"/>
+                                            <constraint firstItem="oFX-q7-Ve5" firstAttribute="leading" secondItem="ERd-GC-OeT" secondAttribute="trailing" constant="79" id="iX2-lG-LKS"/>
+                                            <constraint firstItem="abQ-UF-ahP" firstAttribute="top" secondItem="eoS-XQ-zHe" secondAttribute="topMargin" id="j53-0O-XkO"/>
+                                            <constraint firstItem="ERd-GC-OeT" firstAttribute="top" secondItem="eoS-XQ-zHe" secondAttribute="topMargin" constant="39" id="jVZ-iM-5LM"/>
+                                            <constraint firstItem="oFX-q7-Ve5" firstAttribute="centerX" secondItem="eoS-XQ-zHe" secondAttribute="centerX" id="jo6-JL-nrG"/>
+                                            <constraint firstItem="oFX-q7-Ve5" firstAttribute="bottom" secondItem="eoS-XQ-zHe" secondAttribute="bottomMargin" id="ll6-nX-Yfi"/>
+                                            <constraint firstItem="8BI-Bx-yqx" firstAttribute="centerY" secondItem="eoS-XQ-zHe" secondAttribute="centerY" id="pMJ-1J-cBo"/>
+                                            <constraint firstItem="izk-jY-eIH" firstAttribute="trailing" secondItem="Kjz-aa-fBB" secondAttribute="trailing" id="vxc-8L-tAL"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="izk-jY-eIH" secondAttribute="bottom" constant="39" id="yYL-T5-IBG"/>
+                                            <constraint firstItem="izk-jY-eIH" firstAttribute="leading" secondItem="8BI-Bx-yqx" secondAttribute="trailing" constant="20" id="ykX-2B-Eh0"/>
+                                            <constraint firstItem="izk-jY-eIH" firstAttribute="bottom" secondItem="eoS-XQ-zHe" secondAttribute="bottomMargin" id="ywa-Rj-eyN"/>
+                                            <constraint firstItem="ERd-GC-OeT" firstAttribute="leading" secondItem="ZmD-GK-XNn" secondAttribute="trailing" constant="20" id="zRF-GK-QDC"/>
+                                            <constraint firstItem="8BI-Bx-yqx" firstAttribute="leading" secondItem="oFX-q7-Ve5" secondAttribute="trailing" constant="79" id="zZy-Db-qwH"/>
+                                        </constraints>
+                                        <size key="customSize" width="584" height="124"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Rki-lO-faQ"/>
+                                                <exclude reference="LzN-Dh-gGg"/>
+                                                <exclude reference="jVZ-iM-5LM"/>
+                                                <exclude reference="WQa-zw-Au9"/>
+                                                <exclude reference="iX2-lG-LKS"/>
+                                                <exclude reference="pMJ-1J-cBo"/>
+                                                <exclude reference="zZy-Db-qwH"/>
+                                                <exclude reference="7k1-J0-ANZ"/>
+                                                <exclude reference="8WS-Gp-gta"/>
+                                                <exclude reference="DKz-y8-ysB"/>
+                                                <exclude reference="ZBF-6e-z6j"/>
+                                                <exclude reference="yYL-T5-IBG"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="exerciseNameLabel" destination="abQ-UF-ahP" id="g9x-PU-3qv"/>
+                                            <outlet property="setxRepsxWeightButton" destination="Kjz-aa-fBB" id="gJM-w5-CZ6"/>
+                                            <outletCollection property="setButtons" destination="ZmD-GK-XNn" collectionClass="NSMutableArray" id="HFm-rl-2nd"/>
+                                            <outletCollection property="setButtons" destination="ERd-GC-OeT" collectionClass="NSMutableArray" id="Bto-4p-6DA"/>
+                                            <outletCollection property="setButtons" destination="oFX-q7-Ve5" collectionClass="NSMutableArray" id="B8o-d8-BDn"/>
+                                            <outletCollection property="setButtons" destination="8BI-Bx-yqx" collectionClass="NSMutableArray" id="GKR-fu-IHH"/>
+                                            <outletCollection property="setButtons" destination="izk-jY-eIH" collectionClass="NSMutableArray" id="LVL-vS-Jem"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Rlc-ZK-pAs"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="3Hv-fd-YgP" id="C47-wS-H5g"/>
+                                    <outlet property="delegate" destination="3Hv-fd-YgP" id="eic-JT-6xE"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -813,6 +879,7 @@
                             <constraint firstAttribute="trailing" secondItem="nax-io-dWo" secondAttribute="trailing" id="Sjk-Ng-qy0"/>
                             <constraint firstItem="qZK-lR-NkY" firstAttribute="top" secondItem="Baa-42-I8A" secondAttribute="bottom" id="TmK-qu-6OS"/>
                             <constraint firstItem="nax-io-dWo" firstAttribute="leading" secondItem="xoH-4o-qgB" secondAttribute="leading" id="dCG-VN-7KN"/>
+                            <constraint firstItem="nax-io-dWo" firstAttribute="top" secondItem="xbe-gK-NUw" secondAttribute="bottom" id="f6L-OH-Xmh"/>
                             <constraint firstItem="qZK-lR-NkY" firstAttribute="top" secondItem="Baa-42-I8A" secondAttribute="bottom" id="o7N-tW-Wig"/>
                             <constraint firstItem="qZK-lR-NkY" firstAttribute="top" secondItem="nax-io-dWo" secondAttribute="bottom" id="vMr-p8-1el"/>
                             <constraint firstAttribute="trailing" secondItem="Baa-42-I8A" secondAttribute="trailing" id="x2n-Bn-H6e"/>
@@ -820,6 +887,7 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="5Sd-M7-4Ib"/>
                                 <exclude reference="vMr-p8-1el"/>
                             </mask>
                         </variation>
@@ -828,6 +896,9 @@
                     <connections>
                         <outlet property="buttonContainer" destination="Baa-42-I8A" id="ieD-Oq-xRC"/>
                         <outlet property="collectionView" destination="nax-io-dWo" id="EhJ-Sa-Wd1"/>
+                        <outlet property="timerContainer" destination="mta-f5-7E7" id="cCw-vC-L2W"/>
+                        <outlet property="timerDescription" destination="U8H-0E-vqg" id="I62-Dz-nhl"/>
+                        <outlet property="timerLabel" destination="2Bv-pn-JYL" id="SqW-eG-JcA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6dB-5U-hH2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -950,6 +1021,7 @@
     <resources>
         <image name="Calendar 7" width="30" height="30"/>
         <image name="Calendar 7-FIlled" width="30" height="30"/>
+        <image name="Cancel-50-2" width="50" height="50"/>
         <image name="Dumbbell" width="40" height="40"/>
         <image name="Dumbbell-Filled" width="40" height="40"/>
         <image name="Play" width="30" height="30"/>

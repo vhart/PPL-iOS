@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import AudioToolbox
 
 protocol LoggingViewControllerDelegate {
     func loggedWorkout(context: NSManagedObjectContext)
@@ -24,6 +25,9 @@ class LoggingViewController: UIViewController {
     var count = 0
     var exerciseIndex: Int = 0
     
+    @IBOutlet weak var timerDescription: UILabel!
+    @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var timerContainer: UIView!
     var exercises: [Exercise] {
         get {
             return self.workoutLog!.workout.exercises.array as! [Exercise]
@@ -36,6 +40,7 @@ class LoggingViewController: UIViewController {
         self.title = workoutLog!.date
         buttonContainer.layer.borderWidth = 1.0
         buttonContainer.layer.borderColor = UIColor(white:0.67, alpha:0.7).CGColor
+        timerContainer.hidden = true
     }
 
     @IBAction func logWorkout(sender: UIButton)
@@ -53,6 +58,12 @@ class LoggingViewController: UIViewController {
         self.navigationController?.popViewControllerAnimated(true)
     }
     
+    @IBAction func dismissTimerButtonTapped(sender: UIButton)
+    {
+        timerContainer.hidden = true
+        timer?.invalidate()
+    }
+    
     
     @IBAction func takePhotoTapped(sender: AnyObject)
     {
@@ -61,10 +72,16 @@ class LoggingViewController: UIViewController {
         
     }
     
+    func configureTimerLabel() {
+        let minutes = count / 60
+        let seconds = count % 60
+        
+        timerLabel.text = String(format: "%d:%02d", minutes, seconds)
+    }
+    
     
     func startTimer()
     {
-        //Show view containing timer label
         
         if let _ = timer {
             timer!.invalidate()
@@ -77,14 +94,27 @@ class LoggingViewController: UIViewController {
     
     func countUp()
     {
-        count += 1
         
-        if count == 180 || count == 300 {
-            //Alarm goes off
+        count += 1
+        configureTimerLabel()
+        
+        if count == 90 || count == 300 {
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            AudioServicesPlayAlertSound(SystemSoundID(1033))
         }
 
     }
 
+    func delay(delay: Double, closure: ()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(),
+            closure
+        )
+    }
     
     // MARK: Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
@@ -182,6 +212,14 @@ extension LoggingViewController: UICollectionViewDataSource, UICollectionViewDel
 extension LoggingViewController: LoggingCollectionViewCellDelegate {
     func setLogged(sender: SetButton, set: Set)
     {
+        if timerContainer.hidden == false {
+            timerContainer.hidden = true
+        }
+        
+        delay(0.7) {
+            self.timerContainer.hidden = false
+        }
+        
         startTimer()
         set.checkForCompletion(set.repsCompleted)
         
