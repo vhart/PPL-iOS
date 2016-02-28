@@ -24,6 +24,19 @@ class WeightChangeViewController: UIViewController {
     var progressionScheme: ProgressionScheme!
     var delegate: WeightChangeViewControllerDelegate?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+        navigationBar.tintColor = UIColor.whiteColor()
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        updateLabel()
+    }
+    
     @IBAction func decreaseWeight(sender: AnyObject) {
         if progressionScheme == .Accessory {
             weight = weight - 2.5
@@ -61,24 +74,6 @@ class WeightChangeViewController: UIViewController {
         
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
-        navigationBar.tintColor = UIColor.whiteColor()
-        
-        // Do any additional setup after loading the view.
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(true)
-        updateLabel()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     @IBAction func saveButtonTapped(sender: AnyObject) {
         
         self.dismissViewControllerAnimated(true, completion: nil)
@@ -89,15 +84,6 @@ class WeightChangeViewController: UIViewController {
     @IBAction func cancelButtonTapped(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
+
     
 }

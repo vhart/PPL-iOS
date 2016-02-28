@@ -8,18 +8,17 @@
  
  import UIKit
  
- protocol LoggingButtonDelegate {
+ protocol LoggingCollectionViewCellDelegate {
     func setLogged(sender: SetButton, set: Set)
     func callSegueFromCell(myData dataobject: AnyObject)
  }
  
  class LoggingCollectionViewCell: UICollectionViewCell {
     
-    
     @IBOutlet var setButtons: [SetButton]!
     @IBOutlet weak var exerciseNameLabel: UILabel!
     @IBOutlet weak var setxRepsxWeightButton: SetButton!
-    var delegate: LoggingButtonDelegate?
+    var delegate: LoggingCollectionViewCellDelegate?
     var numberOfSets: Int16 = 0
     var sets: [Set]!
     
@@ -29,6 +28,41 @@
         
     }
     
+    @IBAction func setLogged(sender: SetButton) {
+        let set = sets[Int(sender.setIndex)]
+        
+        if set.repsCompleted == 0 && set.firstAttempt {
+            set.repsCompleted = set.numberOfReps
+            formatOngoingButtonState(sender)
+        } else {
+            set.repsCompleted -= 1
+            
+            if set.repsCompleted < 0 {
+                set.repsCompleted = 0
+                set.firstAttempt = true
+                formatInitialButtonState(sender)
+                
+            } else {
+                formatOngoingButtonState(sender)
+                set.firstAttempt = false
+            }
+            
+            
+        }
+        
+        self.delegate?.setLogged(sender, set: set)
+    }
+    
+    //When the weight button is clicked
+    @IBAction func weightButtonTapped(sender: SetButton)
+    {
+        self.delegate?.callSegueFromCell(myData: sender)
+    }
+    
+ }
+ 
+ // MARK: Button Formatting
+ extension LoggingCollectionViewCell {
     func formatButtons(){
         for i in 0..<sets.count {
             formatButton(setButtons[Int(i)])
@@ -62,33 +96,6 @@
         
     }
     
-    @IBAction func setLogged(sender: SetButton) {
-        let set = sets[Int(sender.setIndex)]
-        
-        
-        if set.repsCompleted == 0 && set.firstAttempt {
-            set.repsCompleted = set.numberOfReps
-            formatOngoingButtonState(sender)
-        } else {
-            set.repsCompleted -= 1
-            
-            if set.repsCompleted < 0 {
-                set.repsCompleted = 0
-                set.firstAttempt = true
-                formatInitialButtonState(sender)
-                
-            } else {
-                formatOngoingButtonState(sender)
-                set.firstAttempt = false
-            }
-            
-            
-        }
-        
-        self.delegate?.setLogged(sender, set: set)
-    }
-    
-    
     func formatInitialButtonState(button: SetButton) {
         button.setTitle("", forState: .Normal)
         button.backgroundColor = UIColor.whiteColor()
@@ -108,15 +115,5 @@
         
         button.setTitle("\(set.repsCompleted)", forState: .Normal)
     }
-    
-    
-    //When the weight button is clicked
-    @IBAction func weightButtonTapped(sender: SetButton) {
-        
-        self.delegate?.callSegueFromCell(myData: sender)
-        
-    }
-    
  }
- 
  
