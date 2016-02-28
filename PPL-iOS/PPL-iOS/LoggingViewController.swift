@@ -42,7 +42,7 @@ class LoggingViewController: UIViewController {
         buttonContainer.layer.borderColor = UIColor(white:0.67, alpha:0.7).CGColor
         timerContainer.hidden = true
     }
-
+    
     @IBAction func logWorkout(sender: UIButton)
     {
         workoutLog!.workout.checkForExerciseCompletion()
@@ -61,7 +61,8 @@ class LoggingViewController: UIViewController {
     @IBAction func dismissTimerButtonTapped(sender: UIButton)
     {
         timerContainer.hidden = true
-        timer?.invalidate()
+        timer!.invalidate()
+        count = 0
     }
     
     
@@ -94,7 +95,6 @@ class LoggingViewController: UIViewController {
     
     func countUp()
     {
-        
         count += 1
         configureTimerLabel()
         
@@ -102,9 +102,9 @@ class LoggingViewController: UIViewController {
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             AudioServicesPlayAlertSound(SystemSoundID(1033))
         }
-
+        
     }
-
+    
     func delay(delay: Double, closure: ()->()) {
         dispatch_after(
             dispatch_time(
@@ -183,6 +183,7 @@ extension LoggingViewController: UICollectionViewDataSource, UICollectionViewDel
         
         
         cell.delegate = self
+        
         cell.sets = sets
         
         cell.exerciseNameLabel.text = exercise.exerciseName
@@ -245,8 +246,11 @@ extension LoggingViewController: LoggingCollectionViewCellDelegate {
             indexPaths.append(indexPath)
         }
         
+        
         let indexSet = NSIndexSet(index: exerciseIndex)
-        collectionView.reloadSections(indexSet)
+        
+        self.collectionView.reloadSections(indexSet)
+        
         
     }
 }

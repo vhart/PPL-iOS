@@ -26,6 +26,13 @@
         super.awakeFromNib()
         setxRepsxWeightButton.tintColor = UIColor(red:0.0, green:0.44, blue:0.91, alpha:1.0)
         
+        
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        resetForReuse()
+        
     }
     
     @IBAction func setLogged(sender: SetButton) {
@@ -64,11 +71,14 @@
  // MARK: Button Formatting
  extension LoggingCollectionViewCell {
     func formatButtons(){
+        print("set count  \(sets.count)")
         for i in 0..<sets.count {
+            print("i in formatbutton = \(i)")
             formatButton(setButtons[Int(i)])
         }
         
         for i in 0..<5-sets.count {
+            print("i in disablebutton = \(i)")
             disableButton(setButtons[Int(5-i-1)])
         }
     }
@@ -78,6 +88,20 @@
         button.hidden = true
         button.enabled = false
     }
+    
+    func enableButton(button: SetButton) {
+        button.hidden = false
+        button.enabled = true
+    }
+    
+    func resetForReuse() {
+        for i in 0..<5-sets.count {
+            print("i in disablebutton = \(i)")
+            enableButton(setButtons[Int(5-i-1)])
+        }
+    }
+    
+   
     
     func formatButton(button:SetButton) {
         let set = sets[Int(button.setIndex)]
