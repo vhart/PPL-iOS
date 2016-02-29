@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import AudioToolbox
+import CloudKit
 
 protocol LoggingViewControllerDelegate {
     func loggedWorkout(context: NSManagedObjectContext)
@@ -68,6 +69,20 @@ class LoggingViewController: UIViewController {
     
     @IBAction func takePhotoTapped(sender: AnyObject)
     {
+        let alertController = UIAlertController(title: "Progress Picture", message: "What do you want to do?", preferredStyle: .ActionSheet)
+        
+        let takePhoto = UIAlertAction(title: "Take Photo", style: .Default) { (action) -> Void in
+            self.takePhoto()
+        }
+        
+        let choosePicture = UIAlertAction(title: "Choose Photo From Library", style: .Default) { (action) -> Void in
+            self.pickPhoto()
+        }
+        
+        alertController.addAction(takePhoto)
+        alertController.addAction(choosePicture)
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
         
         
         
@@ -260,5 +275,35 @@ extension LoggingViewController: WeightChangeViewControllerDelegate {
     func callSegueFromCell(myData dataobject: AnyObject)
     {
         self.performSegueWithIdentifier("ChangeWeight", sender:dataobject )
+    }
+}
+
+extension LoggingViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func pickPhoto() {
+        if UIImagePickerController.isSourceTypeAvailable(.SavedPhotosAlbum) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .PhotoLibrary
+            imagePicker.allowsEditing = false
+            presentViewController(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func takePhoto() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .Camera
+        
+        presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        dismissViewControllerAnimated(true, completion: nil)
+        
+        //Where to save image and how
     }
 }
