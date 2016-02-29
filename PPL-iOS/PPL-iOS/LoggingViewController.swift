@@ -79,8 +79,13 @@ class LoggingViewController: UIViewController {
             self.pickPhoto()
         }
         
+        let cancel = UIAlertAction(title: "Cancel", style: .Cancel) { (action) -> Void in
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        
         alertController.addAction(takePhoto)
         alertController.addAction(choosePicture)
+        alertController.addAction(cancel)
         
         self.presentViewController(alertController, animated: true, completion: nil)
         
