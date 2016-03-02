@@ -24,7 +24,7 @@
 		50A91CE31C7619D00016002B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A91CE21C7619D00016002B /* CoreDataStack.swift */; };
 		50A91D101C7928730016002B /* NSDate+StringDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A91D0F1C7928730016002B /* NSDate+StringDate.swift */; };
 		50B2CAAB1C7BE4EB00363720 /* LogManager+WorkoutLogReturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B2CAAA1C7BE4EB00363720 /* LogManager+WorkoutLogReturn.swift */; };
-		50B6F9B51C83BEFF00182E3B /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B6F9B41C83BEFF00182E3B /* CloudKit.framework */; };
+		50B6F9B91C87B0DB00182E3B /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B6F9B81C87B0DB00182E3B /* CloudKit.framework */; };
 		50CD2BC31C754B5200E17B9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CD2BC21C754B5200E17B9E /* AppDelegate.swift */; };
 		50CD2BC51C754B5200E17B9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CD2BC41C754B5200E17B9E /* ViewController.swift */; };
 		50CD2BC81C754B5200E17B9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50CD2BC61C754B5200E17B9E /* Main.storyboard */; };
@@ -70,7 +70,7 @@
 		50A91D0F1C7928730016002B /* NSDate+StringDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+StringDate.swift"; sourceTree = "<group>"; };
 		50B2CAAA1C7BE4EB00363720 /* LogManager+WorkoutLogReturn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LogManager+WorkoutLogReturn.swift"; sourceTree = "<group>"; };
 		50B6F9B31C83BEF000182E3B /* PPL-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "PPL-iOS.entitlements"; sourceTree = "<group>"; };
-		50B6F9B41C83BEFF00182E3B /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		50B6F9B81C87B0DB00182E3B /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		50CD2BBF1C754B5200E17B9E /* PPL-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PPL-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50CD2BC21C754B5200E17B9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50CD2BC41C754B5200E17B9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CABD5750BB53F33016C3108 /* Pods_PPL_iOS.framework in Frameworks */,
-				50B6F9B51C83BEFF00182E3B /* CloudKit.framework in Frameworks */,
+				50B6F9B91C87B0DB00182E3B /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +270,7 @@
 		80321573926A346D5E73FCBD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				50B6F9B41C83BEFF00182E3B /* CloudKit.framework */,
+				50B6F9B81C87B0DB00182E3B /* CloudKit.framework */,
 				1C7A53357277D220C82931C8 /* Pods_PPL_iOS.framework */,
 			);
 			name = Frameworks;

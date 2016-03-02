@@ -366,12 +366,11 @@ extension LoggingViewController: UIImagePickerControllerDelegate, UINavigationCo
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         workoutImage = info[UIImagePickerControllerOriginalImage] as? UIImage
-        saveImageLocally(info)
         savePhoto()
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func saveImageLocally(info: [String : AnyObject]) {
+    func saveImageLocally() {
         let imageData: NSData = UIImageJPEGRepresentation(workoutImage, 0.8)!
         let path = documentsDirectoryPath.stringByAppendingPathComponent(tempImageName)
         imageURL = NSURL(fileURLWithPath: path)
@@ -391,6 +390,32 @@ extension LoggingViewController: UIImagePickerControllerDelegate, UINavigationCo
     }
     
     func savePhoto(){
+        saveImageLocally()
+        saveImageToCloud()
         UIImageWriteToSavedPhotosAlbum(workoutImage, self, "image:didFinishSavingWithError:contextInfo:", nil)
+        
+        
+    }
+    
+    func saveImageToCloud() {
+        let timestampAsString = String(format: "%f", NSDate.timeIntervalSinceReferenceDate())
+        let timestampParts = timestampAsString.componentsSeparatedByString(".")
+        
+        let photoID = CKRecordID(recordName: "\(workoutLog!.date)-\(timestampParts[0])")
+        
+        let photoRecord = CKRecord(recordType: "Images", recordID: photoID)
+        photoRecord.setObject(workoutLog!.date, forKey: "workoutDate")
+        
+        let imageAsset = CKAsset(fileURL: imageURL)
+        photoRecord.setObject(imageAsset, forKey: "workoutImage")
+        
+        let container = CKContainer.defaultContainer()
+        let privateDatabase = container.privateCloudDatabase
+        
+        privateDatabase.saveRecord(photoRecord) { (record, error) -> Void in
+            if error != nil {
+                print(error)
+            }
+        }
     }
 }
