@@ -69,7 +69,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="History" id="Qvt-Oy-R4p"/>
+                    <tabBarItem key="tabBarItem" title="History" image="Line Chart-30" selectedImage="Line Chart Filled-30" id="Qvt-Oy-R4p"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aQ7-hk-RmG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -563,7 +563,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3UT-Yk-VWX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="617" y="-1712"/>
+            <point key="canvasLocation" x="517" y="-1730"/>
         </scene>
         <!--Logging View Controller-->
         <scene sceneID="sgl-SW-Jyc">
@@ -1024,6 +1024,8 @@
         <image name="Cancel-50-2" width="50" height="50"/>
         <image name="Dumbbell" width="40" height="40"/>
         <image name="Dumbbell-Filled" width="40" height="40"/>
+        <image name="Line Chart Filled-30" width="30" height="30"/>
+        <image name="Line Chart-30" width="30" height="30"/>
         <image name="Play" width="30" height="30"/>
         <image name="Play-Filled" width="30" height="30"/>
     </resources>

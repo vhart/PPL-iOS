@@ -54,5 +54,21 @@ class Workout: NSManagedObject {
         
         exercises = mutableExercises
     }
+    
+    func attemptedAllSets() -> Bool
+    {
+        for exercise in exercises {
+            let exercise = exercise as! Exercise
+            
+            if !exercise.attemptedAllSets() {
+                return false
+            }
+            
+            print("\(exercise.attemptedAllSets())")
+        }
+        
+        return true
+        
+    }
 }
 

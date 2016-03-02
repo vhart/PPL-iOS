@@ -44,6 +44,7 @@ class LogManager {
         
         collectionOfWorkoutLogs = setOfworkoutLogs
     }
+    
 }
 
 extension LogManager {

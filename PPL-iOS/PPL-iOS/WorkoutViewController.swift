@@ -38,7 +38,6 @@ class WorkoutViewController: UIViewController {
         }
     }
     
-    
     // MARK: Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {

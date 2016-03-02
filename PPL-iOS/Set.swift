@@ -36,4 +36,5 @@ class Set: NSManagedObject {
         firstAttempt = true
         didCompleteSet = false
     }
+    
 }

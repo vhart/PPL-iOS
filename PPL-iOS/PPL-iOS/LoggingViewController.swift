@@ -46,18 +46,57 @@ class LoggingViewController: UIViewController {
     
     @IBAction func logWorkout(sender: UIButton)
     {
-        workoutLog!.workout.checkForExerciseCompletion()
-        LogManager.sharedInstance.addWorkoutLog(workoutLog!)
         
-        do {
-            try managedContext.save()
-        } catch let error as NSError {
-            print("Could not save: \(error)")
+        
+        
+        if workoutLog!.workout.attemptedAllSets() {
+            workoutLog!.workout.checkForExerciseCompletion()
+            LogManager.sharedInstance.addWorkoutLog(self.workoutLog!)
+            
+            do {
+                try self.managedContext.save()
+            } catch let error as NSError {
+                print("Could not save: \(error)")
+            }
+            
+            self.delegate?.loggedWorkout(self.managedContext)
+            self.navigationController?.popViewControllerAnimated(true)
+            
+        } else {
+            
+            let alertController = UIAlertController(title: "Didn't Attempt All Sets", message: "Are you sure you want to finish the workout?", preferredStyle: .Alert)
+            
+            
+            let attempt = UIAlertAction(title: "Attempt Unfinished Sets", style: .Default) { (action) -> Void in
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+            
+            let finishWorkout = UIAlertAction(title: "Leave Sets Unfinished", style: .Destructive) { (action) -> Void in
+                self.dismissViewControllerAnimated(true, completion: nil)
+                self.workoutLog!.workout.checkForExerciseCompletion()
+                LogManager.sharedInstance.addWorkoutLog(self.workoutLog!)
+                
+                do {
+                    try self.managedContext.save()
+                } catch let error as NSError {
+                    print("Could not save: \(error)")
+                }
+                
+                self.delegate?.loggedWorkout(self.managedContext)
+                self.navigationController?.popViewControllerAnimated(true)
+            }
+            
+            alertController.addAction(finishWorkout)
+            alertController.addAction(attempt)
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
         }
         
-        self.delegate?.loggedWorkout(managedContext)
-        self.navigationController?.popViewControllerAnimated(true)
+        
+        
+        
     }
+    
     
     @IBAction func dismissTimerButtonTapped(sender: UIButton)
     {

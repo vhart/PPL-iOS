@@ -66,6 +66,22 @@ extension Exercise {
         
     }
     
+    func attemptedAllSets() -> Bool
+    {
+        
+        for set in numberOfSets {
+            let set = set as! Set
+            
+            if set.firstAttempt {
+                return false
+            }
+        }
+        
+        return true
+        
+        
+    }
+    
     func numberOfCompletedSets(numberOfSets: NSOrderedSet) -> Int16
     {
         var completionCount: Int16 = 0

@@ -41,6 +41,7 @@
         if set.repsCompleted == 0 && set.firstAttempt {
             set.repsCompleted = set.numberOfReps
             formatOngoingButtonState(sender)
+            set.firstAttempt = false
         } else {
             set.repsCompleted -= 1
             
