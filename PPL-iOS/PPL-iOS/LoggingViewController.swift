@@ -34,6 +34,11 @@ class LoggingViewController: UIViewController {
             return self.workoutLog!.workout.exercises.array as! [Exercise]
         }
     }
+    var imageURL: NSURL!
+    var workoutImage: UIImage!
+    let documentsDirectoryPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString
+    let tempImageName = "temp_image.jpg"
+    
     
     override func viewDidLoad()
     {
@@ -46,12 +51,22 @@ class LoggingViewController: UIViewController {
     
     @IBAction func logWorkout(sender: UIButton)
     {
-        
-        
-        
         if workoutLog!.workout.attemptedAllSets() {
             workoutLog!.workout.checkForExerciseCompletion()
             LogManager.sharedInstance.addWorkoutLog(self.workoutLog!)
+            
+            if let url = imageURL {
+                let fileManager = NSFileManager()
+                if fileManager.fileExistsAtPath(url.absoluteString) {
+                    do {
+                        try fileManager.removeItemAtURL(url)
+                    }
+                    
+                    catch {
+                        print("path doesn't exist")
+                    }
+                }
+            }
             
             do {
                 try self.managedContext.save()
@@ -322,6 +337,8 @@ extension LoggingViewController: WeightChangeViewControllerDelegate {
     }
 }
 
+
+// MARK: UIImagePickerController
 extension LoggingViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func pickPhoto() {
         if UIImagePickerController.isSourceTypeAvailable(.SavedPhotosAlbum) {
@@ -341,13 +358,39 @@ extension LoggingViewController: UIImagePickerControllerDelegate, UINavigationCo
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = .Camera
+        imagePicker.cameraCaptureMode = .Photo
+        imagePicker.modalPresentationStyle = .FullScreen
         
         presentViewController(imagePicker, animated: true, completion: nil)
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        workoutImage = info[UIImagePickerControllerOriginalImage] as? UIImage
+        saveImageLocally(info)
+        savePhoto()
         dismissViewControllerAnimated(true, completion: nil)
-        
-        //Where to save image and how
+    }
+    
+    func saveImageLocally(info: [String : AnyObject]) {
+        let imageData: NSData = UIImageJPEGRepresentation(workoutImage, 0.8)!
+        let path = documentsDirectoryPath.stringByAppendingPathComponent(tempImageName)
+        imageURL = NSURL(fileURLWithPath: path)
+        imageData.writeToURL(imageURL, atomically: true)
+    }
+    
+    func image(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo:UnsafePointer<Void>) {
+        if error == nil {
+            let ac = UIAlertController(title: "Saved!", message: "Your image has been saved to your photos.", preferredStyle: .Alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            presentViewController(ac, animated: true, completion: nil)
+        } else {
+            let ac = UIAlertController(title: "Save error", message: error?.localizedDescription, preferredStyle: .Alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            presentViewController(ac, animated: true, completion: nil)
+        }
+    }
+    
+    func savePhoto(){
+        UIImageWriteToSavedPhotosAlbum(workoutImage, self, "image:didFinishSavingWithError:contextInfo:", nil)
     }
 }
