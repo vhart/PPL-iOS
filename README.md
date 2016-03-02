@@ -16,37 +16,6 @@ The schedule can be run a couple of different ways, but this app will be provide
 - Saturday: Legs
 - Sunday: Rest
 
-**5 Day Flexible Schedule (Weekends Off)**
-
-Week 1:
-- Monday: Push
-- Tuesday: Pull
-- Wednesday: Legs
-- Thursday: Push
-- Friday: Pull
-- Saturday: Rest
-- Sunday: Rest
-
-Week 2:
-- Monday: Legs
-- Tuesday: Push
-- Wednesday: Pull
-- Thursday: Legs
-- Friday: Push
-- Saturday: Rest
-- Sunday: Rest
-
-Week 3:
-- Monday: Pull
-- Tuesday: Legs
-- Wednesday: Push
-- Thursday: Pull
-- Friday: Legs
-- Saturday: Rest
-- Sunday: Rest
-
-Repeat Weeks 1-3.
-
 #What routine will be used for this application?
 For the application, I'll be using a routine that's fairly popular on [r/Fitness](http://reddit.com/r/fitness), [A Linear Progression Based PPL Program for Beginners by Metallicapd] (https://www.reddit.com/r/Fitness/comments/37ylk5/a_linear_progression_based_ppl_program_for/).
 
