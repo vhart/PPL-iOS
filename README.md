@@ -16,37 +16,6 @@ The schedule can be run a couple of different ways, but this app will be provide
 - Saturday: Legs
 - Sunday: Rest
 
-**5 Day Flexible Schedule (Weekends Off)**
-
-Week 1:
-- Monday: Push
-- Tuesday: Pull
-- Wednesday: Legs
-- Thursday: Push
-- Friday: Pull
-- Saturday: Rest
-- Sunday: Rest
-
-Week 2:
-- Monday: Legs
-- Tuesday: Push
-- Wednesday: Pull
-- Thursday: Legs
-- Friday: Push
-- Saturday: Rest
-- Sunday: Rest
-
-Week 3:
-- Monday: Pull
-- Tuesday: Legs
-- Wednesday: Push
-- Thursday: Pull
-- Friday: Legs
-- Saturday: Rest
-- Sunday: Rest
-
-Repeat Weeks 1-3.
-
 #What routine will be used for this application?
 For the application, I'll be using a routine that's fairly popular on [r/Fitness](http://reddit.com/r/fitness), [A Linear Progression Based PPL Program for Beginners by Metallicapd] (https://www.reddit.com/r/Fitness/comments/37ylk5/a_linear_progression_based_ppl_program_for/).
 
@@ -57,6 +26,8 @@ When it comes to working out, aside from consistency and keeping track of your d
 
 
 - **Simple Workout Logging Interface & Functionality** - The most important part of this app, or any workout app, should be logging your workouts. When I'm in the gym the last thing I want to do is fumble through screens trying to log my workout. It's key to make this process as simple as possible. As soon as you select the number of reps for your set, the rest countdown will start and then go off when it's time for another set.
+
+![Alt text](http://i.imgur.com/jVUIFlF.png "Workout Home Screen") ![Alt text](http://i.imgur.com/LXeZ4z3.png "Workout Logging Screen")
 
 - **Visually Appealing Workout Progression** - Sure, looking at your weight numbers increase workout-to-workout is great, but when you see the progression of your body? That's a different type of visual. Not only does it provide motivation, but it's also validation that you're putting in work.
 
