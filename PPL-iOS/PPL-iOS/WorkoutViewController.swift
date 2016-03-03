@@ -64,7 +64,7 @@ extension WorkoutViewController: UICollectionViewDelegateFlowLayout {
         let leftAndRightPaddings: CGFloat = 8.0
         
         let width = (CGRectGetWidth(collectionView!.frame) - leftAndRightPaddings)
-        let height = (CGRectGetHeight(collectionView!.frame)/6)
+        let height = (CGRectGetHeight(collectionView!.frame)/6)+8.0
         
         return CGSize(width: width, height: height)
     }

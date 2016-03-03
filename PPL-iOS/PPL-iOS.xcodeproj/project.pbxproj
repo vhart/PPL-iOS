@@ -18,13 +18,14 @@
 		50363B871C7B77CC008FDE7D /* LogManager+ExerciseReturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50363B861C7B77CC008FDE7D /* LogManager+ExerciseReturn.swift */; };
 		50363B891C7B7B6A008FDE7D /* LogManager+WorkoutType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50363B881C7B7B6A008FDE7D /* LogManager+WorkoutType.swift */; };
 		50386E931C7B9CE500735975 /* WorkoutCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50386E921C7B9CE500735975 /* WorkoutCollectionViewController.swift */; };
-		50386E961C7BA7F600735975 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50386E951C7BA7F600735975 /* HistoryViewController.swift */; };
+		50386E961C7BA7F600735975 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50386E951C7BA7F600735975 /* ProgressViewController.swift */; };
 		50386E981C7BAB7D00735975 /* LoggingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50386E971C7BAB7D00735975 /* LoggingCollectionViewController.swift */; };
 		50386E9A1C7BAE8200735975 /* WorkoutLogCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50386E991C7BAE8200735975 /* WorkoutLogCollectionViewCell.swift */; };
 		50A91CE31C7619D00016002B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A91CE21C7619D00016002B /* CoreDataStack.swift */; };
 		50A91D101C7928730016002B /* NSDate+StringDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A91D0F1C7928730016002B /* NSDate+StringDate.swift */; };
 		50B2CAAB1C7BE4EB00363720 /* LogManager+WorkoutLogReturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B2CAAA1C7BE4EB00363720 /* LogManager+WorkoutLogReturn.swift */; };
-		50B6F9B91C87B0DB00182E3B /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B6F9B81C87B0DB00182E3B /* CloudKit.framework */; };
+		50B6F9BB1C87C7CC00182E3B /* BodyProgressCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B6F9BA1C87C7CC00182E3B /* BodyProgressCollectionViewCell.swift */; };
+		50B6F9BD1C87CCC600182E3B /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B6F9BC1C87CCC600182E3B /* CloudKit.framework */; };
 		50CD2BC31C754B5200E17B9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CD2BC21C754B5200E17B9E /* AppDelegate.swift */; };
 		50CD2BC51C754B5200E17B9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CD2BC41C754B5200E17B9E /* ViewController.swift */; };
 		50CD2BC81C754B5200E17B9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50CD2BC61C754B5200E17B9E /* Main.storyboard */; };
@@ -63,14 +64,15 @@
 		50363B861C7B77CC008FDE7D /* LogManager+ExerciseReturn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LogManager+ExerciseReturn.swift"; sourceTree = "<group>"; };
 		50363B881C7B7B6A008FDE7D /* LogManager+WorkoutType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LogManager+WorkoutType.swift"; sourceTree = "<group>"; };
 		50386E921C7B9CE500735975 /* WorkoutCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutCollectionViewController.swift; sourceTree = "<group>"; };
-		50386E951C7BA7F600735975 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		50386E951C7BA7F600735975 /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		50386E971C7BAB7D00735975 /* LoggingCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingCollectionViewController.swift; sourceTree = "<group>"; };
 		50386E991C7BAE8200735975 /* WorkoutLogCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutLogCollectionViewCell.swift; sourceTree = "<group>"; };
 		50A91CE21C7619D00016002B /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		50A91D0F1C7928730016002B /* NSDate+StringDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+StringDate.swift"; sourceTree = "<group>"; };
 		50B2CAAA1C7BE4EB00363720 /* LogManager+WorkoutLogReturn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LogManager+WorkoutLogReturn.swift"; sourceTree = "<group>"; };
 		50B6F9B31C83BEF000182E3B /* PPL-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "PPL-iOS.entitlements"; sourceTree = "<group>"; };
-		50B6F9B81C87B0DB00182E3B /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		50B6F9BA1C87C7CC00182E3B /* BodyProgressCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyProgressCollectionViewCell.swift; sourceTree = "<group>"; };
+		50B6F9BC1C87CCC600182E3B /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		50CD2BBF1C754B5200E17B9E /* PPL-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PPL-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50CD2BC21C754B5200E17B9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50CD2BC41C754B5200E17B9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,7 +107,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CABD5750BB53F33016C3108 /* Pods_PPL_iOS.framework in Frameworks */,
-				50B6F9B91C87B0DB00182E3B /* CloudKit.framework in Frameworks */,
+				50B6F9BD1C87CCC600182E3B /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,8 +161,9 @@
 				50386E991C7BAE8200735975 /* WorkoutLogCollectionViewCell.swift */,
 				501E42B41C7CD65C00DF71EC /* LoggingViewController.swift */,
 				501E42A51C7C1ECE00DF71EC /* LoggingCollectionViewCell.swift */,
+				50B6F9BA1C87C7CC00182E3B /* BodyProgressCollectionViewCell.swift */,
 				50E784BA1C7E98E8008DB49A /* WeightChangeViewController.swift */,
-				50386E951C7BA7F600735975 /* HistoryViewController.swift */,
+				50386E951C7BA7F600735975 /* ProgressViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -270,7 +273,7 @@
 		80321573926A346D5E73FCBD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				50B6F9B81C87B0DB00182E3B /* CloudKit.framework */,
+				50B6F9BC1C87CCC600182E3B /* CloudKit.framework */,
 				1C7A53357277D220C82931C8 /* Pods_PPL_iOS.framework */,
 			);
 			name = Frameworks;
@@ -413,7 +416,7 @@
 				50363B7D1C7B73E7008FDE7D /* LogManager+ExerciseUpdate.swift in Sources */,
 				50E785041C7FA2FC008DB49A /* Exercise+CoreDataProperties.swift in Sources */,
 				50363B691C7A6D11008FDE7D /* NSOrderedSet+SetToArray.swift in Sources */,
-				50386E961C7BA7F600735975 /* HistoryViewController.swift in Sources */,
+				50386E961C7BA7F600735975 /* ProgressViewController.swift in Sources */,
 				501E42A61C7C1ECE00DF71EC /* LoggingCollectionViewCell.swift in Sources */,
 				501E42AA1C7C8D0800DF71EC /* SetButton.swift in Sources */,
 				50CD2C2C1C756E1800E17B9E /* Set.swift in Sources */,
@@ -431,6 +434,7 @@
 				50363B851C7B7643008FDE7D /* LogManager+ExerciseUpdateHelpers.swift in Sources */,
 				50386E9A1C7BAE8200735975 /* WorkoutLogCollectionViewCell.swift in Sources */,
 				50E785031C7FA2FC008DB49A /* Set+CoreDataProperties.swift in Sources */,
+				50B6F9BB1C87C7CC00182E3B /* BodyProgressCollectionViewCell.swift in Sources */,
 				50CD2C4B1C758E0000E17B9E /* LogManager.swift in Sources */,
 				50CD2C471C7582CE00E17B9E /* Workout.swift in Sources */,
 				50E784BB1C7E98E8008DB49A /* WeightChangeViewController.swift in Sources */,
