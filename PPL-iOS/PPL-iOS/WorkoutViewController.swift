@@ -42,7 +42,7 @@ class WorkoutViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
         if segue.identifier == "LogWorkout" {
-            self.tabBarController?.tabBar.hidden = true
+            tabBarController?.tabBar.hidden = true
             let loggingViewController = segue.destinationViewController as! LoggingViewController
             loggingViewController.delegate = self
             loggingViewController.workoutLog = currentWorkoutLog

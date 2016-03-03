@@ -10,7 +10,7 @@ import UIKit
 import CloudKit
 
 class ProgressViewController: UIViewController {
-    @IBOutlet weak var navigationBar: UINavigationBar!
+    @IBOutlet weak var navigationbar: UINavigationBar!
     @IBOutlet weak var collectionView: UICollectionView!
     var bodyProgressImages = [CKRecord]()
     
@@ -18,6 +18,7 @@ class ProgressViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         progressView.hidden = true
         removeNavigationBarHairline()
         formatNavigationBarTitle()
@@ -27,6 +28,8 @@ class ProgressViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        navigationController?.navigationBar.hidden = true
+        tabBarController?.tabBar.hidden = false
         
         if !bodyProgressImages.isEmpty {
             bodyProgressImages.removeAll()
@@ -35,12 +38,22 @@ class ProgressViewController: UIViewController {
         fetchPhotos()
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-    }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "viewImage" {
+//            navigationController?.navigationBar.hidden = false
+//            tabBarController?.tabBar.hidden = true
+//            
+//            let imageViewController = segue.destinationViewController as! ImageViewController
+//    
+//            imageViewController.bodyImageView.image = sender as? UIImage
+////            imageViewController.date = date
+//            
+//            
+//        }
+//    }
     
     func removeNavigationBarHairline() {
-        for parent in navigationBar.subviews {
+        for parent in navigationbar.subviews {
             for childView in parent.subviews {
                 if(childView is UIImageView) {
                     childView.removeFromSuperview()
@@ -50,9 +63,9 @@ class ProgressViewController: UIViewController {
     }
     
     func formatNavigationBarTitle() {
-        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
-        navigationBar.tintColor = UIColor.whiteColor()
-        navigationBar.topItem!.title = "PPL"
+        navigationbar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+        navigationbar.tintColor = UIColor.whiteColor()
+        navigationbar.topItem!.title = "PPL"
     }
     
     func fetchPhotos() {
@@ -86,6 +99,8 @@ class ProgressViewController: UIViewController {
         }
     }
     
+    
+    
 }
 
 extension ProgressViewController: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -110,6 +125,14 @@ extension ProgressViewController: UICollectionViewDataSource, UICollectionViewDe
         
         return cell
     }
+    
+//    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+//        if let cell = self.collectionView.cellForItemAtIndexPath(indexPath) as? BodyProgressCollectionViewCell {
+//            let image = cell.imageView.image
+//            self.performSegueWithIdentifier("viewImage", sender: image)
+//        }
+//    }
+
 }
 
 // MARK: UICollectionViewDelegateFlowLayout

@@ -26,6 +26,7 @@
 		50B2CAAB1C7BE4EB00363720 /* LogManager+WorkoutLogReturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B2CAAA1C7BE4EB00363720 /* LogManager+WorkoutLogReturn.swift */; };
 		50B6F9BB1C87C7CC00182E3B /* BodyProgressCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B6F9BA1C87C7CC00182E3B /* BodyProgressCollectionViewCell.swift */; };
 		50B6F9BD1C87CCC600182E3B /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B6F9BC1C87CCC600182E3B /* CloudKit.framework */; };
+		50B6F9BF1C87EEF900182E3B /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B6F9BE1C87EEF900182E3B /* ImageViewController.swift */; };
 		50CD2BC31C754B5200E17B9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CD2BC21C754B5200E17B9E /* AppDelegate.swift */; };
 		50CD2BC51C754B5200E17B9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CD2BC41C754B5200E17B9E /* ViewController.swift */; };
 		50CD2BC81C754B5200E17B9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50CD2BC61C754B5200E17B9E /* Main.storyboard */; };
@@ -73,6 +74,7 @@
 		50B6F9B31C83BEF000182E3B /* PPL-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "PPL-iOS.entitlements"; sourceTree = "<group>"; };
 		50B6F9BA1C87C7CC00182E3B /* BodyProgressCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyProgressCollectionViewCell.swift; sourceTree = "<group>"; };
 		50B6F9BC1C87CCC600182E3B /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		50B6F9BE1C87EEF900182E3B /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		50CD2BBF1C754B5200E17B9E /* PPL-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PPL-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50CD2BC21C754B5200E17B9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50CD2BC41C754B5200E17B9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -161,9 +163,10 @@
 				50386E991C7BAE8200735975 /* WorkoutLogCollectionViewCell.swift */,
 				501E42B41C7CD65C00DF71EC /* LoggingViewController.swift */,
 				501E42A51C7C1ECE00DF71EC /* LoggingCollectionViewCell.swift */,
-				50B6F9BA1C87C7CC00182E3B /* BodyProgressCollectionViewCell.swift */,
 				50E784BA1C7E98E8008DB49A /* WeightChangeViewController.swift */,
 				50386E951C7BA7F600735975 /* ProgressViewController.swift */,
+				50B6F9BA1C87C7CC00182E3B /* BodyProgressCollectionViewCell.swift */,
+				50B6F9BE1C87EEF900182E3B /* ImageViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 				50CD2C181C756CC900E17B9E /* ExerciseNameConstants.swift in Sources */,
 				501E42B31C7CCC2000DF71EC /* WorkoutViewController.swift in Sources */,
 				501E42A21C7C1A1700DF71EC /* Double+CleanValue.swift in Sources */,
+				50B6F9BF1C87EEF900182E3B /* ImageViewController.swift in Sources */,
 				50CD2C281C756E1800E17B9E /* Exercise.swift in Sources */,
 				50386E931C7B9CE500735975 /* WorkoutCollectionViewController.swift in Sources */,
 				50CD2C371C75702500E17B9E /* ProgressionSchemes.swift in Sources */,
