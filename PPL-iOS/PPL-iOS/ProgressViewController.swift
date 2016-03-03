@@ -14,19 +14,25 @@ class ProgressViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     var bodyProgressImages = [CKRecord]()
     
+    @IBOutlet weak var progressView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        progressView.hidden = true
         removeNavigationBarHairline()
         formatNavigationBarTitle()
-        fetchPhotos()
+
         
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        collectionView.reloadData()
+        
+        if !bodyProgressImages.isEmpty {
+            bodyProgressImages.removeAll()
+        }
+        
+        fetchPhotos()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -50,6 +56,9 @@ class ProgressViewController: UIViewController {
     }
     
     func fetchPhotos() {
+        progressView.hidden = false
+        view.bringSubviewToFront(progressView)
+        
         let container = CKContainer.defaultContainer()
         let privateDatabase = container.privateCloudDatabase
         let predicate = NSPredicate(value: true)
@@ -68,6 +77,7 @@ class ProgressViewController: UIViewController {
                     }
                     
                     NSOperationQueue.mainQueue().addOperationWithBlock{
+                        self.progressView.hidden = true
                         self.collectionView.reloadData()
                     }
                 }
@@ -113,7 +123,7 @@ extension ProgressViewController: UICollectionViewDelegateFlowLayout {
     {
         
         let width = (CGRectGetWidth(collectionView!.frame)/3)-1.0
-        let height = (CGRectGetHeight(collectionView!.frame)/3)-1.0
+        let height = (CGRectGetHeight(collectionView!.frame)/3)
         
         return CGSize(width: width, height: height)
     }

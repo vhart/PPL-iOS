@@ -26,6 +26,7 @@ class LoggingViewController: UIViewController {
     var count = 0
     var exerciseIndex: Int = 0
     
+    @IBOutlet weak var progressView: UIView!
     @IBOutlet weak var timerDescription: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var timerContainer: UIView!
@@ -43,7 +44,8 @@ class LoggingViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        self.title = workoutLog!.date
+        progressView.hidden = true
+        title = workoutLog!.date
         buttonContainer.layer.borderWidth = 1.0
         buttonContainer.layer.borderColor = UIColor(white:0.67, alpha:0.7).CGColor
         timerContainer.hidden = true
@@ -378,11 +380,7 @@ extension LoggingViewController: UIImagePickerControllerDelegate, UINavigationCo
     }
     
     func image(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo:UnsafePointer<Void>) {
-        if error == nil {
-            let ac = UIAlertController(title: "Saved!", message: "Your image has been saved to your photos.", preferredStyle: .Alert)
-            ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-            presentViewController(ac, animated: true, completion: nil)
-        } else {
+        if error != nil {
             let ac = UIAlertController(title: "Save error", message: error?.localizedDescription, preferredStyle: .Alert)
             ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
             presentViewController(ac, animated: true, completion: nil)
@@ -398,6 +396,10 @@ extension LoggingViewController: UIImagePickerControllerDelegate, UINavigationCo
     }
     
     func saveImageToCloud() {
+        
+        progressView.hidden = false
+        view.bringSubviewToFront(progressView)
+        
         let timestampAsString = String(format: "%f", NSDate.timeIntervalSinceReferenceDate())
         let timestampParts = timestampAsString.componentsSeparatedByString(".")
         
@@ -415,6 +417,10 @@ extension LoggingViewController: UIImagePickerControllerDelegate, UINavigationCo
         privateDatabase.saveRecord(photoRecord) { (record, error) -> Void in
             if error != nil {
                 print(error)
+            }
+            
+            NSOperationQueue.mainQueue().addOperationWithBlock {
+                self.progressView.hidden = true
             }
         }
     }
