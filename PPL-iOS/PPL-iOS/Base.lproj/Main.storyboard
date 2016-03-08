@@ -702,7 +702,6 @@
                                             <outletCollection property="exerciseSetxRepxWeightLabels" destination="Ca5-JC-0qm" collectionClass="NSMutableArray" id="I6p-Kf-xdG"/>
                                             <outletCollection property="exerciseSetxRepxWeightLabels" destination="B9g-hK-aBK" collectionClass="NSMutableArray" id="Dln-XJ-Xv5"/>
                                             <outletCollection property="exerciseSetxRepxWeightLabels" destination="oGU-2F-i7z" collectionClass="NSMutableArray" id="Dq8-HD-HvN"/>
-                                            <segue destination="3Hv-fd-YgP" kind="show" identifier="LogWorkout" id="BFb-GC-wZQ"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -733,6 +732,7 @@
                     <navigationItem key="navigationItem" title="PPL" id="0WS-yV-zoV"/>
                     <connections>
                         <outlet property="collectionView" destination="Gcm-J0-yBd" id="kKz-bJ-iJo"/>
+                        <segue destination="3Hv-fd-YgP" kind="show" identifier="LogWorkout" id="sbL-Y5-0Te"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3UT-Yk-VWX" userLabel="First Responder" sceneMemberID="firstResponder"/>

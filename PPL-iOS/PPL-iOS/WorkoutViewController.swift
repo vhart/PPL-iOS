@@ -42,11 +42,13 @@ class WorkoutViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
         if segue.identifier == "LogWorkout" {
+            
             tabBarController?.tabBar.hidden = true
             let loggingViewController = segue.destinationViewController as! LoggingViewController
             loggingViewController.delegate = self
             loggingViewController.workoutLog = currentWorkoutLog
             loggingViewController.managedContext = managedContext
+            
         }
     }
 }
@@ -114,6 +116,12 @@ extension WorkoutViewController: UICollectionViewDataSource, UICollectionViewDel
         }
         
         return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.section == 0 {
+            performSegueWithIdentifier("LogWorkout", sender: self)
+        }
     }
 }
 
