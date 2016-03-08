@@ -22,7 +22,7 @@ class ProgressViewController: UIViewController {
         progressView.hidden = true
         removeNavigationBarHairline()
         formatNavigationBarTitle()
-
+        
         
     }
     
@@ -31,26 +31,32 @@ class ProgressViewController: UIViewController {
         navigationController?.navigationBar.hidden = true
         tabBarController?.tabBar.hidden = false
         
-        if !bodyProgressImages.isEmpty {
-            bodyProgressImages.removeAll()
+        if Reachability.isConnectedToNetwork() {
+            
+            if !bodyProgressImages.isEmpty {
+                bodyProgressImages.removeAll()
+            }
+            
+            fetchPhotos()
+            
+        } else {
+            print("No internet connection")
         }
-        
-        fetchPhotos()
     }
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if segue.identifier == "viewImage" {
-//            navigationController?.navigationBar.hidden = false
-//            tabBarController?.tabBar.hidden = true
-//            
-//            let imageViewController = segue.destinationViewController as! ImageViewController
-//    
-//            imageViewController.bodyImageView.image = sender as? UIImage
-////            imageViewController.date = date
-//            
-//            
-//        }
-//    }
+    //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    //        if segue.identifier == "viewImage" {
+    //            navigationController?.navigationBar.hidden = false
+    //            tabBarController?.tabBar.hidden = true
+    //
+    //            let imageViewController = segue.destinationViewController as! ImageViewController
+    //
+    //            imageViewController.bodyImageView.image = sender as? UIImage
+    ////            imageViewController.date = date
+    //
+    //
+    //        }
+    //    }
     
     func removeNavigationBarHairline() {
         for parent in navigationbar.subviews {
@@ -126,13 +132,13 @@ extension ProgressViewController: UICollectionViewDataSource, UICollectionViewDe
         return cell
     }
     
-//    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-//        if let cell = self.collectionView.cellForItemAtIndexPath(indexPath) as? BodyProgressCollectionViewCell {
-//            let image = cell.imageView.image
-//            self.performSegueWithIdentifier("viewImage", sender: image)
-//        }
-//    }
-
+    //    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    //        if let cell = self.collectionView.cellForItemAtIndexPath(indexPath) as? BodyProgressCollectionViewCell {
+    //            let image = cell.imageView.image
+    //            self.performSegueWithIdentifier("viewImage", sender: image)
+    //        }
+    //    }
+    
 }
 
 // MARK: UICollectionViewDelegateFlowLayout

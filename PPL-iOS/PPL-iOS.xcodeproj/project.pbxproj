@@ -12,6 +12,7 @@
 		501E42AA1C7C8D0800DF71EC /* SetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E42A91C7C8D0800DF71EC /* SetButton.swift */; };
 		501E42B31C7CCC2000DF71EC /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E42B21C7CCC2000DF71EC /* WorkoutViewController.swift */; };
 		501E42B51C7CD65C00DF71EC /* LoggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E42B41C7CD65C00DF71EC /* LoggingViewController.swift */; };
+		5034300A1C8F522F00E30F8E /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503430091C8F522F00E30F8E /* Reachability.swift */; };
 		50363B691C7A6D11008FDE7D /* NSOrderedSet+SetToArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50363B681C7A6D11008FDE7D /* NSOrderedSet+SetToArray.swift */; };
 		50363B7D1C7B73E7008FDE7D /* LogManager+ExerciseUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50363B7C1C7B73E7008FDE7D /* LogManager+ExerciseUpdate.swift */; };
 		50363B851C7B7643008FDE7D /* LogManager+ExerciseUpdateHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50363B841C7B7643008FDE7D /* LogManager+ExerciseUpdateHelpers.swift */; };
@@ -59,6 +60,7 @@
 		501E42A91C7C8D0800DF71EC /* SetButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetButton.swift; sourceTree = "<group>"; };
 		501E42B21C7CCC2000DF71EC /* WorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 		501E42B41C7CD65C00DF71EC /* LoggingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingViewController.swift; sourceTree = "<group>"; };
+		503430091C8F522F00E30F8E /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		50363B681C7A6D11008FDE7D /* NSOrderedSet+SetToArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSOrderedSet+SetToArray.swift"; sourceTree = "<group>"; };
 		50363B7C1C7B73E7008FDE7D /* LogManager+ExerciseUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LogManager+ExerciseUpdate.swift"; sourceTree = "<group>"; };
 		50363B841C7B7643008FDE7D /* LogManager+ExerciseUpdateHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LogManager+ExerciseUpdateHelpers.swift"; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			children = (
 				501E42B61C7CEFD800DF71EC /* delete */,
 				501E42B21C7CCC2000DF71EC /* WorkoutViewController.swift */,
+				503430091C8F522F00E30F8E /* Reachability.swift */,
 				50386E991C7BAE8200735975 /* WorkoutLogCollectionViewCell.swift */,
 				501E42B41C7CD65C00DF71EC /* LoggingViewController.swift */,
 				501E42A51C7C1ECE00DF71EC /* LoggingCollectionViewCell.swift */,
@@ -448,6 +451,7 @@
 				50CD2BC31C754B5200E17B9E /* AppDelegate.swift in Sources */,
 				50E785051C7FA2FC008DB49A /* Workout+CoreDataProperties.swift in Sources */,
 				501E42B51C7CD65C00DF71EC /* LoggingViewController.swift in Sources */,
+				5034300A1C8F522F00E30F8E /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

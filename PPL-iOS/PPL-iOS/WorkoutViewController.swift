@@ -103,7 +103,6 @@ extension WorkoutViewController: UICollectionViewDataSource, UICollectionViewDel
                 cell.dateLabel.text = "Next"
             } else {
                 cell.dateLabel.text = "Today"
-                print(currentWorkoutLog.date)
             }
         } else if let workoutLogs = recentWorkoutLogs {
             let workoutLog = workoutLogs[indexPath.section - 1]
