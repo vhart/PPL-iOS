@@ -96,7 +96,13 @@ extension WorkoutViewController: UICollectionViewDataSource, UICollectionViewDel
         if indexPath.section == 0 {
             cell.typeOfWorkoutLabel.text = "\(currentWorkoutLog.workout.typeOfWorkout)"
             cell.updateExerciseLabels(currentWorkoutLog.workout.exercises.copyToArray() as! [Exercise])
-            cell.dateLabel.text = "Today"
+            
+            if let recentWorkoutLogDate = recentWorkoutLogs?[indexPath.section].date where recentWorkoutLogDate == currentWorkoutLog.date {
+                cell.dateLabel.text = "Next"
+            } else {
+                cell.dateLabel.text = "Today"
+                print(currentWorkoutLog.date)
+            }
         } else if let workoutLogs = recentWorkoutLogs {
             let workoutLog = workoutLogs[indexPath.section - 1]
             

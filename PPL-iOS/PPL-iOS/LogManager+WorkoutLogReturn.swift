@@ -23,7 +23,6 @@ extension LogManager {
             recentWorkoutLogs.append(recentWorkoutLogsCopy.popLast()!)
         }
 
-        print(recentWorkoutLogs.first!.workout.typeOfWorkout)
         return recentWorkoutLogs
     }
 }
