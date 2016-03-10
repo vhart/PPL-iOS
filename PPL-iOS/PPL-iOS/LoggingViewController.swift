@@ -58,16 +58,7 @@ class LoggingViewController: UIViewController {
             LogManager.sharedInstance.addWorkoutLog(self.workoutLog!)
             
             if let url = imageURL {
-                let fileManager = NSFileManager()
-                if fileManager.fileExistsAtPath(url.absoluteString) {
-                    do {
-                        try fileManager.removeItemAtURL(url)
-                    }
-                    
-                    catch {
-                        print("path doesn't exist")
-                    }
-                }
+                NSFileManager().removeUrlIfPossible(url)
             }
             
             do {

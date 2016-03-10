@@ -51,6 +51,7 @@
 		50E785041C7FA2FC008DB49A /* Exercise+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E785001C7FA2FC008DB49A /* Exercise+CoreDataProperties.swift */; };
 		50E785051C7FA2FC008DB49A /* Workout+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E785011C7FA2FC008DB49A /* Workout+CoreDataProperties.swift */; };
 		5CABD5750BB53F33016C3108 /* Pods_PPL_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7A53357277D220C82931C8 /* Pods_PPL_iOS.framework */; };
+		C77D8F171C9134B5005F61C1 /* NSFileManager+RemoveItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D8F161C9134B5005F61C1 /* NSFileManager+RemoveItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +104,7 @@
 		50E785011C7FA2FC008DB49A /* Workout+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Workout+CoreDataProperties.swift"; path = "../Workout+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5F4897E1632C359D49E09065 /* Pods-PPL-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPL-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PPL-iOS/Pods-PPL-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		96C05875B06F7C4E15F461F4 /* Pods-PPL-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPL-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PPL-iOS/Pods-PPL-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		C77D8F161C9134B5005F61C1 /* NSFileManager+RemoveItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSFileManager+RemoveItem.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +256,7 @@
 				50A91D0F1C7928730016002B /* NSDate+StringDate.swift */,
 				501E42A11C7C1A1700DF71EC /* Double+CleanValue.swift */,
 				501E42A91C7C8D0800DF71EC /* SetButton.swift */,
+				C77D8F161C9134B5005F61C1 /* NSFileManager+RemoveItem.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				501E42A61C7C1ECE00DF71EC /* LoggingCollectionViewCell.swift in Sources */,
 				501E42AA1C7C8D0800DF71EC /* SetButton.swift in Sources */,
 				50CD2C2C1C756E1800E17B9E /* Set.swift in Sources */,
+				C77D8F171C9134B5005F61C1 /* NSFileManager+RemoveItem.swift in Sources */,
 				50CD2C181C756CC900E17B9E /* ExerciseNameConstants.swift in Sources */,
 				501E42B31C7CCC2000DF71EC /* WorkoutViewController.swift in Sources */,
 				501E42A21C7C1A1700DF71EC /* Double+CleanValue.swift in Sources */,
