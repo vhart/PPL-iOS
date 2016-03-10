@@ -11,7 +11,6 @@ import Foundation
 extension NSFileManager {
 
     func removeUrlIfPossible(url: NSURL) {
-
         if self.fileExistsAtPath(url.absoluteString) {
             do {
                 try self.removeItemAtURL(url)
